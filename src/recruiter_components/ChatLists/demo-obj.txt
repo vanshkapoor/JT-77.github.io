@@ -1,0 +1,69 @@
+
+h k <himanshukhosla123@gmail.com>
+18 Mar 2018, 13:20
+to Arpit
+
+candidate:{
+    chats:[{
+        jobid:"", //will be in chat object in firebase to differentiate personal or business chat
+        chatID: "chatId1"
+        domain: "vlsconsulting"
+        userID: "1dNz6sTi6igs55",
+        recName:"",
+        candName:"", 
+        status:"active|block|pending", //in fb for now
+        lastmessage" :{
+          "mediaUrl" :"",
+          "message" :"demo message",
+          "name" : "himanshu",
+          "photoUrl":"",      
+          "sender":"himanshukhosla123@gmail.com",
+          "timestamp":1520796285108,
+          "status":"seen"|"unseen"
+        },
+    }],
+    question_answers:[{
+        chatID: "BotgFdJRqasj8Z8ga88"
+        domain: "vlsconsulting"
+        jobID: "-LRTTKNDHRPb-UXNPXKCVYSUBENBCB"
+        reason: ""
+        status: "Fellow Select"
+        timestamp: null
+        userID:""
+        answers:[{question:"",answer:"",status:""}]    
+    }],
+    feedback:[{
+        jobid:"",
+        recruiterid:"",
+        rating:"",
+        comments:""
+    }]    
+}
+
+jobObj:{
+    questonaries:[{},{}],
+    added_keys:["",""],
+    aboutJob:[{},{}]
+}
+    
+recruiter:{
+    feedback:"400/800",
+    smsUsed:[{count:"",timestamp:"",month:"",year:""}],
+    rec_cand_chats:[{
+        chatid:"",
+        domain:"",
+        jobid:"",
+        recruiterid:"",
+        timestamp:""
+        status:"initiated"|"pending"
+    }],
+    rec_rec_chats:[{
+        chatid:"",
+        domain:"",
+        recruiterid:"",
+        timestamp:""
+        leader:"true"|"false"
+    }]    
+}    
+
+http://localhost:3000/?rec=1dNz6sTi6igs55b2ZgFDBCBTZ773&can=9133232061&job=-LRTTKNDHRPb-UXNPXKCVYSUBENBCB
