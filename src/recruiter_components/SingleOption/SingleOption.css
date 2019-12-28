@@ -1,0 +1,13 @@
+.comment-option:before {
+    content: "";
+    background-color: #e1e1e1;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    border-radius:50%;
+}
+.comment-option:hover::before,.comment-option.select::before{
+    background-color: #0069ff !important;
+}
