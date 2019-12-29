@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>if(localStorage.getItem("session_token"))location.href="index.html";</script>
+    <title>SIH DMS App</title>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     <style>
+.input,.signup{position:relative}.input input,.submit{transition:.2s ease-out}.feedback,.legend{text-align:center}*{-ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;border:0}body,html{width:100%;height:100%;background:#D2D6DE;font-family:'Open Sans',sans-serif;font-weight:200}h5{color:#69757B}h5 a{color:#337ab7;text-decoration:none}.signup{top:50%;width:50%;min-width:250px;max-width:400px;display:table;margin:-230px auto 0;background:#fff;border-radius:4px}.input input,.input span,.legend,.submit{display:block}.legend{width:100%;background:#2196F3;padding:15px;color:#fff;font-size:20px}.input{width:90%;margin:15px auto}.input span{position:absolute;color:#d4d4d4;left:10px;top:4px;font-size:20px}.input input,.input select{width:100%;padding:10px 5px 10px 40px;border:1px solid #ccc;border-radius:4px;height:40px;color:#000}.input input:focus{padding:10px 5px 10px 10px;outline:0;border-color:#2196F3}.submit{width:45px;height:45px;margin:0 auto -15px;background:#fff;border-radius:100%;border:1px solid #2196F3;color:#2196F3;font-size:28px;cursor:pointer;box-shadow:0 0 0 7px #fff}.submit:focus,.submit:hover{background:#2196F3;color:#fff;outline:0}.feedback{position:absolute;bottom:-45px;width:100%;color:#fff;background:#2ecc71;padding:10px 0;font-size:13px;display:none;opacity:0}.green{background-color:#2ecc71}.feedback:before{bottom:100%;left:50%;border:solid transparent;content:"";height:0;width:0;position:absolute;pointer-events:none;border-color:rgba(46,204,113,0);border-bottom-color:#2ecc71;border-width:10px;margin-left:-10px}.confpasserror,.emailerror{color:red;display:none;font-size:12px}.orange{background:#ff4500;color:#fff}.orange::before{border-bottom-color:#ff4500}form{box-shadow:3px 5px 15px 0 #ccc;border:1px solid #ccc;border-radius:10px}.icon{max-height:100px;width:auto;display:inline-block}
+         .text-center{text-align: center;}h1{padding: 20px 0px;margin: 0px;}
+     </style> 
+</head>
+    <!-- Modal -->
+<body>
+    <form name="customForm" action="" id="loginform" class="signup" onsubmit="return false">
+            <div>
+                <h1 class="text-center">DAM MANAGEMENT SYSTEM</h1>
+            </div>
+            <fieldset>
+                
+                <legend class="legend">Login</legend>
+            
+              <div class="input">
+                  <input type="email" name="email" placeholder="Email Address" required />
+                <span><i class="fa fa-envelope-o"></i></span>
+              </div>
+              <div class="input">
+                  <input type="password" name="password" placeholder="Enter password" required/>
+                <span><i class="fa fa-key"></i></span>
+              </div>
+              
+              
+              <button type="submit" id="login" class="submit"><i class="fa fa-long-arrow-right"></i></button>
+              
+            </fieldset>
+            
+            <div class="feedback">
+                login successful <br />
+              redirecting...
+            </div>
+            <h5 style="margin:20px auto 5px;text-align:center;">Don't have an account ? <a href="#" onclick='$("#loginform").hide();$("#signupform").show();reset();loadDams();'>Sign Up</a></h5>  
+            
+          </form>
+          
+          <form name="customForm" action="" id="signupform" class="signup" onsubmit="return false" style="display:none;margin-top:-260px;">
+           <div>
+                <h1 class="text-center">DAM MANAGEMENT SYSTEM</h1>
+            </div>
+            <fieldset>
+                
+                <legend class="legend">SignUp</legend>
+              
+              
+<!--
+              <div class="input">
+                  <input type="text" name="text" placeholder="Name" required />
+                <span><i class="fa fa-user"></i></span>
+              </div>
+-->
+              
+              <div class="input">
+                  <input type="email" name="email" placeholder="Email Address" required/>
+                <span><i class="fa fa-envelope-o"></i></span>
+              </div>
+              <div class="input">
+                  <input type="tel" name="tel" placeholder="Mobile Number" required/>
+                <span><i class="fa fa-mobile"></i></span>
+              </div>
+              <div class="input">
+                  <input type="password" name="password" placeholder="Enter password" required/>
+                <span><i class="fa fa-key"></i></span>
+              </div>
+              
+              <div class="input">
+                  <input type="password" name="confpassword" placeholder="Confirm password" required/>
+                <span><i class="fa fa-key"></i></span>
+              </div>
+              
+              <div class="input">
+                 <select name="" id="dams" class="form-control" required>
+                     <option value="">Select Dam</option>
+                     
+                 </select>
+              </div>
+              
+              <h6 style="text-align:center;" class="confpasserror">
+                  Entered and confirmed password don't match .
+              </h6>
+              <button type="submit" id="signup" class="submit"><i class="fa fa-long-arrow-right"></i></button>
+              
+            </fieldset>
+            
+            <div class="feedback">
+                signup successful <br />
+              redirecting...
+            </div>
+            <h5 style="margin:20px auto 5px;text-align:center;">Alreay have an account ? <a href="#" onclick='$("#loginform").show();$("#signupform").hide();reset();'>Log In</a></h5>  
+          </form>
+          
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>   

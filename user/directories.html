@@ -1,0 +1,98 @@
+<style>
+    table td a{margin-right: 5px;}
+</style>
+<!-- Modal -->
+<div id="dam_modal" class="modal fade" role="dialog" data-backdrop="static" tabindex="-5">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"   ng-click="resetFeilds();">&times;</button>
+          <h4 class="modal-title"><strong>Directories</strong></h4>
+      </div>
+      <div class="modal-body">
+      <form class="form-horizontal">
+       
+       
+        <div class="form-group">
+                  <label for="name" class="col-xs-12 col-sm-3">{{"Name"|capitalize}}</label>
+
+                  <div class="col-xs-12 col-sm-9">
+                    <input type="text" class="form-control" ng-model="directory.name" ng-disabled="doDisable" id="name" placeholder='Name'>
+                  </div>
+        </div>
+        
+        <div class="form-group">
+                  <label for="no" class="col-xs-12 col-sm-3">{{"Number"|capitalize}}</label>
+
+                  <div class="col-xs-12 col-sm-9">
+                    <input type="text" class="form-control" ng-model="directory.number" ng-disabled="doDisable" id="no" placeholder='Number'>
+                  </div>
+        </div>
+        
+
+                       
+      </form>
+          </div>
+      
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="manageAddorUpdateDirectories();">SAVE</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="resetFeilds();">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--End of Modal-->    
+     
+
+<section class="content-header">
+      <h2>
+        Directories
+         <button type="button" class="btn btn-success" data-target="#dam_modal" data-toggle="modal" ng-click="onAddMode();"><i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp; Add Directory</button>
+         
+      </h2>
+</section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+<!--        put your coloums here    -->
+          <div class="col-xs-12">
+              <div class="box">
+                 
+            <div class="box-body">
+              <table ng-init="loadDirectories(); resetFeilds();" id="batch_attendance_table" class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                  <th>Directorie Name</th>
+                  <th>Phone Number</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr ng-repeat="x in directoryList">
+                        <td>{{x.name|uppercase}}</td>
+                        <td>{{x.number}}</td>
+                        <td>
+                         <a data-toggle="modal" data-target="#dam_modal" class="btn btn-success" ng-click="readDirectories($index,false);"><i class="fa fa-edit"></i></a>
+                         <a class="btn btn-danger"  ng-click="deleteDirectories($index);"><i class="fa fa-trash"></i></a> 
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Directorie Name</th>
+                  <th>Phone Number</th>
+                  <th>Action</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div> 
+              </div>
+          </div> 
+            
+        </div>
+</section>

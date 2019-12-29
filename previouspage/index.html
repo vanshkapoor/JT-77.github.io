@@ -1,0 +1,1078 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://platform.linkedin.com/in.js">
+    api_key: 81httx1yaln9yf
+    authorize: false
+    onLoad: onLinkedInLoad
+</script>
+
+<style>
+body {
+    font-family: georgia;
+	font-size: 18px
+
+}
+a:hover {
+    background-color: 	#D3D3D3;
+}
+</style>
+</head>
+<body style='background-color:#fafafa'>
+
+
+<div id="id01" class="w3-modal" style="display:none">
+<span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-display-topright"><font color="white"><b>&times;</b></font></span>
+	<center>  <video width="100%" height="500" controls><source src="video.mp4" type="video/mp4"></video></center>
+</div>
+
+<div id="id00" class="w3-modal" style="display:none">
+<span onclick="document.getElementById('id00').style.display='none'"
+      class="w3-button w3-display-topright"><font color="white"><b>&times;</b></font></span>
+	<center>  <video width="500" height="500" controls><source src="video.mp4" type="video/mp4"></video></center>
+</div>
+
+
+
+
+<div id="id02" class="w3-modal" style="display:none">
+
+<span onclick="document.getElementById('id02').style.display='none'"
+      class="w3-button w3-display-topright"><font color="white"><b>&times;</b></font></span>
+<center>
+
+<button class="w3-button forms  w3-light-grey" style="width:20%" onclick="openForm1('wRecruiter')"><b>RECRUITER</b></button><button class="w3-button forms w3-blue" style="width:20%" onclick="openForm1('wCandidate')"><b>CANDIDATE</b></button></center>
+<center><div style="background-color:white;width:40%">
+<div id="wRecruiter" style="background-color:white" class="web">
+<form class="w3-container" action="/action_page.php">
+
+  <input class="w3-input" type="text" placeholder="First Name" required>
+  <input class="w3-input" type="text" placeholder="Last Name" required>
+  <input class="w3-input" type="text" placeholder="Company Name" required>
+
+  <input class="w3-input" type="text" placeholder="Designation" required>
+
+  <input class="w3-input" type="email" placeholder="Email" required>
+
+  <input class="w3-input" type="text" list="countries" name="countries" placeholder="Start Typing your Country" required>
+  <datalist id="countries">
+    <option value="India">
+    <option value="Australia">
+    <option value="Russia">
+    <option value="USA">
+    <option value="UK">
+  </datalist>
+  <br>
+  <center> <button class="w3-button w3-green">Submit</button></center>
+
+</form>
+<center>
+<h4><b>OR</b></h4>
+<script type="in/Login"></script>
+<br><br>
+</div>
+<div id="wCandidate" style="background-color:white;display:none" class="web">
+  <form class="w3-container"  action="/action_page.php">
+
+  <input class="w3-input" type="text" placeholder="First Name" required>
+  <input class="w3-input" type="text" placeholder="Last Name" required>
+  <input class="w3-input" type="text" placeholder="Primary Skill" required>
+  <input class="w3-input" type="text" placeholder="Current Company" required>
+  <input class="w3-input" type="text" placeholder="Experience" required>
+  <input class="w3-input" type="email" placeholder="Email" required>
+  <input class="w3-input" type="text" placeholder="Mobile Number" required>
+   <input class="w3-input" type="text" list="countries" name="countries" placeholder="Start Typing your Country" required>
+  <datalist id="countries">
+    <option value="India">
+    <option value="Australia">
+    <option value="Russia">
+    <option value="USA">
+    <option value="UK">
+  </datalist>
+  <span style="color:grey;font-size:12px;margin:10px;display:inline-block;">* You will contacted by sms for further updates .</span>
+  
+  <br>
+  <center> <button class="w3-button w3-green">Submit</button></center>
+
+</form>
+
+<center>
+<h4><b>OR</b></h4>
+<script type="in/Login"></script>
+<br><br>
+</div>
+</div>
+</center>
+</div>
+
+
+
+
+<div id="id03" class="w3-modal" style="display:none">
+
+<span onclick="document.getElementById('id03').style.display='none'"
+      class="w3-button w3-display-topright"><font color="white"><b>&times;</b></font></span>
+<center>
+
+<button class="w3-button forms  w3-light-grey" style="width:50%" onclick="openForm('Recruiter')"><b>RECRUITER</b></button><button class="w3-button forms w3-blue" style="width:50%" onclick="openForm('Candidate')"><b>CANDIDATE</b></button></center>
+<center><div style="background-color:white;width:100%">
+<div id="Recruiter" style="background-color:white" class="mob">
+<form class="w3-container" action="/action_page.php">
+
+  <input class="w3-input" type="text" placeholder="First Name" required>
+  <input class="w3-input" type="text" placeholder="Last Name" required>
+  <input class="w3-input" type="text" placeholder="Company Name" required>
+
+  <input class="w3-input" type="text" placeholder="Designation" required>
+
+  <input class="w3-input" type="email" placeholder="Email" required>
+
+  <input class="w3-input" type="text" list="countries" name="countries" placeholder="Start Typing your Country" required>
+  <datalist id="countries">
+    <option value="India">
+    <option value="Australia">
+    <option value="Russia">
+    <option value="USA">
+    <option value="UK">
+  </datalist>
+  <br>
+  <center> <button class="w3-button w3-green">Submit</button></center>
+
+</form>
+<center>
+<h4><b>OR</b></h4>
+<script type="in/Login"></script>
+<br><br>
+</div>
+<div id="Candidate" style="background-color:white;display:none" class="mob">
+  <form class="w3-container"  action="/action_page.php">
+
+  <input class="w3-input" type="text" placeholder="First Name" required>
+  <input class="w3-input" type="text" placeholder="Last Name" required>
+  <input class="w3-input" type="text" placeholder="Primary Skill" required>
+  <input class="w3-input" type="text" placeholder="Current Company" required>
+  <input class="w3-input" type="text" placeholder="Experience" required>
+  <input class="w3-input" type="email" placeholder="Email" required>
+  <input class="w3-input" type="text" placeholder="Mobile Number" required>
+   <input class="w3-input" type="text" list="countries" name="countries" placeholder="Start Typing your Country" required>
+  <datalist id="countries">
+    <option value="India">
+    <option value="Australia">
+    <option value="Russia">
+    <option value="USA">
+    <option value="UK">
+  </datalist>
+  <span style="color:grey;font-size:12px;margin:10px;display:inline-block;">* You will contacted by sms for further updates .</span>
+  <br>
+  <center> <button class="w3-button w3-green">Submit</button></center>
+
+</form>
+
+<center>
+<h4><b>OR</b></h4>
+<script type="in/Login"></script>
+<br><br>
+</div>
+</div>
+</center>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$j = jQuery.noConflict();
+
+function video()
+{
+document.getElementById('id01').style.display='block';
+}
+function video1()
+{
+document.getElementById('id00').style.display='block';
+}
+
+function form()
+{
+document.getElementById('id02').style.display='block';
+}
+function form1()
+{
+document.getElementById('id03').style.display='block';
+}
+
+function social() {
+
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+
+
+
+
+
+
+
+
+var skills="Android";
+
+var nview="";
+var device=navigator.userAgent;
+if(device.match(/Android|iPhone|iPad|iPod/))
+{
+nview=".w3-mobile";
+console.log("mobile");
+$j('body').append("<div class='w3-blue' style='width:100%;position:fixed;z-index:1'>"
++"<table cellpadding='3' ><tr><td><img src='fellowapp.jpg' style='height:40px' class='w3-circle' alt='Image Not Available'></td><td><h4><font color='white'>FellowApp</font><br><font size='2px' color='white' id='status'>online</font></h4></td><td style='width:100%'>"
++"<div class='w3-dropdown-click w3-blue' style='float:right'>"
++"<img src='3dots.png' id='dots' onclick='social()' align='right' hspace='5' style='height:40px;width:40px'><br><br></div><img src='reg1.png' onclick='form1()' align='right' hspace='5' style='height:40px;width:40px'>"
++"<img src='vid2.png' align='right' onclick='video()' hspace='5' style='height:40px;width:40px'>"
+
++"<br><br>"
++"<div id='Demo' class='w3-light-grey w3-dropdown-content w3-animate-zoom w3-round-large' style='width:60px'>"
++"<ul style='list-style-type:none'>"
++"<li><a href='https://facebook.com/FellowApp ' target='_blank' style='text-decoration:none'>Facebook</a></li>"
++"<br>"
++"<li><a href='https://twitter.Com/FellowAppCo' target='_blank' style='text-decoration:none'>Twitter</a></li>"
++"<br>"
++"<li><a href='' style='text-decoration:none'>LinkedIn</a></li>"
++"<br>"
++"</ul>"
++"</div></td></tr></table>"
++"</div><br><br><br>"
++"<div class='w3-row'>"
++"<div class='w3-mobile'></div>"
++"</div>");
+var i=0;
+var interval=setInterval(function(){first()},1000);
+}
+else
+{
+nview=".w3-half";
+console.log("laptop or pc");
+$j('body').append("<div class='w3-row'>"
++"<div class='w3-container w3-quarter' style='visibility:hidden'></div>"
++"<div class='w3-container w3-half'><div class='w3-blue' style='width:50%;position:fixed;z-index:1'>"
++"<table cellpadding='3' ><tr><td><img src='fellowapp.jpg' style='height:40px' class='w3-circle' alt='Image Not Available'></td><td><h4><font color='white'>FellowApp</font><br><font size='2px' color='white' id='status'>online</font></h4></td><td style='width:100%'><div class='w3-dropdown-click w3-blue' style='float:right'><img src='3dots.png' id='dots' onclick='social()' align='right' hspace='20' style='height:40px;width:40px'><br><br><div id='Demo' class='w3-light-grey w3-dropdown-content w3-animate-zoom w3-round-large' style='width:60px'>"
++"<ul style='list-style-type:none'>"
++"<li><a href='https://facebook.com/FellowApp ' target='_blank' style='text-decoration:none'>Facebook</a></li>"
++"<br>"
++"<li><a href='https://twitter.Com/FellowAppCo' target='_blank' style='text-decoration:none'>Twitter</a></li>"
++"<br>"
++"<li><a href='' style='text-decoration:none'>LinkedIn</a></li>"
++"<br>"
++"</ul>"
++"</div></div><img src='reg1.png' onclick='form()' align='right' hspace='20' style='height:40px;width:40px'>    <img src='vid2.png' align='right' onclick='video1()' hspace='20' style='height:40px;width:40px'></td></tr></table>"
++"</div><br><br><br></div>"
++"<div class='w3-container w3-quarter' style='visibility:hidden'></div>"
++"</div>");
+var i=0;
+var interval=setInterval(function(){first()},1000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$j('.forms.w3-button').click(function(e){
+
+$j(this).addClass('w3-light-grey');
+$j(this).removeClass('w3-blue');
+$j('.forms.w3-button').not( this ).removeClass( "w3-light-grey");
+$j('.forms.w3-button').not( this ).addClass( "w3-blue");
+
+});
+
+$j(document).click(function(e){
+
+if(e.target.id!="dots")
+{
+ var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") != -1) {
+        x.className = x.className.replace(" w3-show", "");
+    }
+	}
+})
+
+function openForm1(vName) {
+    var i;
+    var x = document.getElementsByClassName("web");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+	}
+    document.getElementById(vName).style.display = "block";
+
+	}
+
+function openForm(vName) {
+    var i;
+    var x = document.getElementsByClassName("mob");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+	}
+    document.getElementById(vName).style.display = "block";
+
+	}
+
+
+
+//$j(nview).append("<br><br><center><textarea  class='w3-light-grey w3-input w3-border  boolean' placeholder='Start Typing your Boolean and Press Enter'></textarea></center>");
+
+console.log($j(window).scrollTop());
+document.addEventListener("DOMNodeInserted", function(event){
+     window.scrollBy(0,$j(document).height() - $j('body').offset().top);
+	});
+
+// setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  boolean' placeholder='Start Typing your Boolean and Press Enter'></textarea></center>")},500);
+
+$j(document).on('change', '.w3-select.w3-border.skillset', function(){
+	skills=$j(this).val();
+	console.log(skills);
+	});
+
+
+
+$j(document).on('click', '.w3-button.w3-green.w3-hover-green', function(){
+
+
+
+
+   var name=$j(this).text();
+   $j('.w3-section').remove();
+   $j('.w3-button.w3-green.w3-hover-green').remove();
+   if(name.indexOf("Haha Sure, shoot out")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Great. So basically I’m trained to handle recruiters & candidates for now.</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>But my intelligence says, this app is not just for the Job world, but something beyond to help you connect better.</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hang on, this is not another Facebook :P </h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Do you have more info?</button></div></center>")},3500);
+
+ }
+ else if(name.indexOf("Very Much")!=-1 || name.indexOf("Not Really, I can try")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Great !!</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>How about having a quick Booleanathon right away, what say?</h6></span><br><br>")},1500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>I’m up for the challenge</button></div></center>")},2500);
+
+ }
+ else if(name.indexOf("I’m up for the challenge")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Amazing, before we dive into the challenge, do you know the Boolean stats?</h6></span><br><br>")},500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>No idea, can you tell me?</button></div></center>")},1500);
+
+ }
+  else if(name.indexOf("No idea, can you tell me?")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here you go, these numbers are in context to the Indian Recruiters</h6></span><br><br><img class='w3-image' src='boolean.png' style='align:left;height:200px;width:350px'><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Let’s get back with our Booleanathon</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Choose the search engine which you’re comfortable.</h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section '><button class='w3-button w3-green w3-hover-green w3-medium'>Naukri</button>   <button class='w3-button w3-green w3-hover-green w3-medium'>LinkedIn</button></div></center>")},3500);
+
+ }
+  else if(name.indexOf("Naukri")!=-1 || name.indexOf("LinkedIn")!=-1)
+   {
+   localStorage.setItem("search",name);
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Write the best Boolean which will yield high number of resumes without compromising on the quality</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Choose one skill of your choice</h6></span><br><br>")},1500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><select  class='w3-select w3-border w3-light-grey  w3-half skillset'><option>Android</option><option>Nodejs + Nosql</option><option>UI + Any JS</option></select><button class='w3-button w3-green w3-hover-green'>Go</button></center>")},2500);
+
+ }
+  if(name.indexOf("Go")!=-1 )
+  {
+   //else if(name.indexOf("Android")!=-1 || name.indexOf("Nodejs + Nosql")!=-1 || name.indexOf("UI + Any JS")!=-1)
+
+   localStorage.setItem("skill",skills);
+   $j('.w3-select.w3-border.skillset').remove();
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+skills+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Amazing !!</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Look this is for a developer skill & you gotta write that one perfect Boolean which would get you both Qunatitative & Qualitative profiles. Now the ball is at your court ;)</h6></span><br><br>")},1500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  boolean' placeholder='Start Typing your Boolean and Press Enter'></textarea></center>")},2500);
+
+ }
+  else if(name.indexOf("Let me write again")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  boolean' placeholder='Start Typing your Boolean and Press Enter'></textarea></center>")},500);
+  }
+  else if(name.indexOf("Kindly Guide")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, in next few minutes I will help you with some Boolean fundamentals</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Let me chill you first, what would you like to have?<ul><li>Any soft drink would do</li><li>Maybe Sweet lime or Pineapple</li><li>Chocolate shake/Banana Shake</li></ul></h6></span><br><br>")},1500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Option1</button>    <button class='w3-button w3-green w3-hover-green'>Option2</button>    <button class='w3-button w3-green w3-hover-green'>Option3</button></div></center>")},2500);
+
+ }
+
+ else if(name.indexOf("Option1")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Sorry, I'am not integrated with Zomato currently to place an order for you ;).Wish I could do so</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Let me teach you Boolean with your order</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean for the order you have placed goes like this: <br><br> (Coke OR Pepsi OR Fanta) </h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I'm sure this wont suffice you, I believe you must be a foodie. Let's order something more <ul><li>Chicken Burger</li><li>Pizza</li><li>French Fries</li></ul></h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Chicken Burger</button>   <button class='w3-button w3-green w3-hover-green'>Pizza</button>     <button class='w3-button w3-green w3-hover-green'>French Fries</button></div></center>")},3500);
+
+ }
+
+  else if(name.indexOf("Chicken Burger")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta)AND 'Chicken Burger' </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+   else if(name.indexOf("Pizza")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta)AND Pizza </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+  else if(name.indexOf("French Fries")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta)AND 'French Fries' </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+   else if(name.indexOf("Sure, why not?")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>That's amazing, guess you're pretty keen in learning stuff :) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> What if you had to place a combo? <ul><li>Chicken Burger along with Coke or</li><li>Pizza along with Pepsi</li></ul></h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean for your combo order is : <br><br> (('Chicken burger' AND Coke)OR (Pizza AND Pepsi)) </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I know by now your tummy would be cursing you, I will let you go and grab some pizza or burger ;) Before that, I have couple of sites which I believe will help you in Boolean. Would you like to know? </h6></span><br><br>")},3500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Yeah, I wanna</button> </div></center>")},4500);
+
+ }
+
+
+ else if(name.indexOf("Option2")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Sorry, I'am not integrated with Zomato currently to place an order for you ;).Wish I could do so</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Let me teach you Boolean with your order</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean for the order you have placed goes like this: <br><br> ('Sweet Lime' OR Pineapple) </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I'm sure this wont suffice you, I believe you must be a foodie. Let's order something more <ul><li>Burger</li><li>Veg Pizza</li><li>Chips</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Burger</button>   <button class='w3-button w3-green w3-hover-green'>Veg Pizza</button>     <button class='w3-button w3-green w3-hover-green'>Chips</button></div></center>")},3500);
+
+ }
+
+  else if(name.indexOf("Burger")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta) AND Burger </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+  else if(name.indexOf("Veg Pizza")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta) AND 'Veg Pizza' </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+  else if(name.indexOf("Chips")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta) AND Chips </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+  else if(name.indexOf("Option3")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Sorry, I'am not integrated with Zomato currently to place an order for you ;).Wish I could do so</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Let me teach you Boolean with your order</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean for the order you have placed goes like this: ('Chocolate Shake' OR 'Banana Shake') </h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I'm sure this wont suffice you, I believe you must be a foodie. Let's order something more <ul><li>Noodles</li><li>Veg Rice</li><li>Chicken Fry</li></ul></h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Noodles</button>   <button class='w3-button w3-green w3-hover-green'>Veg Rice</button>     <button class='w3-button w3-green w3-hover-green'>Chicken Fry</button></div></center>")},3500);
+
+ }
+
+   else if(name.indexOf("Noodles")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta) AND Noodles </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+  else if(name.indexOf("Veg Rice")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta) AND 'Veg Rice' </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+   else if(name.indexOf("Chicken Fry")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Yuummmm.. That's like wanting me to order one. Talking about food was a bad example I believe ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hocus pocus, let's get back to the Boolean</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So the Boolean goes like this for the orders you have placed so far : <br><br> (Coke OR Pepsi OR Fanta) AND 'Chicken Fry' </h6></span><br><br>")},2500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> How does this work? <ul><li>Add OR logic to your options & make sure you add a bracket on using OR logic</li><li>Add double quotes if you're using two terms which denote one word</li><li>The more you order, keep adding it to the Boolean with a AND logic.</li></ul></h6></span><br><br>")},3500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I have something little more complicated, want to give it a look?</h6></span><br><br>")},4500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, why not?</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},5500);
+
+ }
+
+
+ else if(name.indexOf("Yeah, I wanna")!=-1)
+   {
+
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here are some quick online content which can help you<br><ul><li><a href='https://source.socialtalent.co/' target='_blank' style='text-decoration:none;'><b>socialtalent</b></center></a></li><li><a href='http://booleanblackbelt.com/2013/06/linkedin-sourcing-ninja-webinar-recording-now-on-youtube/' target='_blank' style='text-decoration:none'><b>Boolean Black Belt</b></li></ul>")},500);
+//   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here are some quick online content which can help you<br><br><div style='width:600px;overflow-x:scroll'><table><tr><td><a href='https://source.socialtalent.co/' target='_blank' style='text-decoration:none;color:white'><center><b>socialtalent</b></center></a></td><td><br><a href='http://booleanblackbelt.com/2013/06/linkedin-sourcing-ninja-webinar-recording-now-on-youtube/' target='_blank' style='text-decoration:none;color:white'><center><b>Boolean Black Belt</b></center></a></td></tr></table></div></span><br><br>")},500);
+
+ // setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here are some quick online content which can help you<br><br><table><tr><td><iframe class='links' src='https://source.socialtalent.co/' scrolling='no' style='width:600px'></iframe><br><br><a href='https://source.socialtalent.co/' target='_blank' style='text-decoration:none'><center><b>socialtalent</b></center></a></td><td><iframe class='links' src='http://booleanblackbelt.com/2013/06/linkedin-sourcing-ninja-webinar-recording-now-on-youtube/' scrolling='no' style='width:600px'></iframe><br><br><a href='http://booleanblackbelt.com/2013/06/linkedin-sourcing-ninja-webinar-recording-now-on-youtube/' target='_blank' style='text-decoration:none'><center><b>Boolean Black Belt</b></center></a></td></tr></table></span><br><br>")},500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><br><center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Hey, answer for my Boolean?</button></div></center>")},1500);
+  }
+  else if(name.indexOf("Hey, answer for my Boolean?")!=-1)
+   {
+   var bool=""
+   if(localStorage.getItem("search")=="Naukri")
+   {
+   console.log(localStorage.getItem("search"));
+   if(localStorage.getItem("skill")=="Android")
+   bool="((Java AND Android AND SDK AND (‘Mobile app’ OR ‘Mobile apps’ OR ‘Android apps’ OR Playstore OR ‘Play store’ OR ‘Mobile application’ OR ‘Android application’ OR ‘Android app’ OR ‘Android Studio’))  OR ‘Android developer’ OR ‘Android engineer’ OR ‘Android app developer’ OR ‘Android Application developer’ OR ‘Android Application engineer’ OR ‘Android Application Development’ OR ‘Android app development’ OR ‘Android mobile application’)"
+   else if(localStorage.getItem("skill")=="Nodejs + Nosql")
+   bool="(Nodejs OR Node OR MEAN) AND (API OR Webservices OR Rest OR Restful OR SOAP OR getapi OR Postapi OR ‘Get api’ OR ‘Post API’) AND (Nosql OR Mongo OR Mongodb OR Couch OR Couchdb OR Maria OR Mariadb OR Cassandra OR Documentdb)"
+   else if(localStorage.getItem("skill")=="UI + Any JS")
+   bool="(‘UI Developer’ OR ‘UI Engineer’ OR ‘Frontend developer’ OR ‘Front end Engineer’ OR ‘Front end developer’ OR ‘Frontend engineer’ OR ‘UX Engineer’ OR ‘UX Developer’) AND (Angular OR Angularjs OR React OR Reactjs OR angular1 OR angular2 OR Typescript) "
+   }
+   else if(localStorage.getItem("search")=="LinkedIn")
+   {
+   console.log(localStorage.getItem("search"));
+   if(localStorage.getItem("skill")=="Android")
+   bool="((Java AND Android AND SDK AND (‘Mobile app’ OR ‘Mobile apps’ OR ‘Android apps’ OR Playstore OR ‘Play store’ OR ‘Mobile application’ OR ‘Android application’ OR ‘Android app’ OR ‘Android Studio’))  OR ‘Android developer’ OR ‘Android engineer’ OR ‘Android app developer’ OR ‘Android Application developer’ OR ‘Android Application engineer’ OR ‘Android Application Development’’ OR ‘Android app development’ OR ‘Android mobile application’ OR 'Android Dev' OR 'Android Lead') NOT (Recruiter OR Hiring OR Talent OR ios)"
+   else if(localStorage.getItem("skill")=="Nodejs + Nosql")
+   bool="(Nodejs OR Node OR MEAN) AND (API OR Webservices OR Rest OR Restful OR SOAP OR getapi OR Postapi OR ‘Get api’ OR ‘Post API’) AND (Nosql OR Mongo OR Mongodb OR Couch OR Couchdb OR Maria OR Mariadb OR Cassandra OR Documentdb) NOT (Recruiter OR Hiring OR Talent)"
+   else if(localStorage.getItem("skill")=="UI + Any JS")
+   bool="(‘UI Developer’ OR ‘UI Engineer’ OR ‘Frontend developer’ OR ‘Front end Engineer’ OR ‘Front end developer’ OR ‘Frontend engineer’ OR ‘UX Engineer’ OR ‘UX Developer’) AND (Angular OR Angularjs OR React OR Reactjs OR angular1 OR angular2 OR Typescript OR Backbone OR D3) NOT (Recruiter OR Hiring OR Talent)"
+   }
+
+  $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So you’re not gonna leave without testing me uh? ;)</h6></span><br><br>")},500);
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Listen, generally there are multiple ways of writing a Boolean. So worry not if you have not written just exactly the way I have written</h6></span><br><br>")},1500)
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here you go, this is what I wrote</h6></span><br><br>")},2500)
+
+setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>"+bool+"</h6></span><br><br>")},3500)
+
+
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Can you explain how you wrote this?</button></div></center>")},4500);
+  }
+
+  else if(name.indexOf("Can you explain how you wrote this?")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Sure, I follow simple steps while writing a Boolean: <ul><li>Understand the search engine on which you’re searching</li><li>Know the list of synonyms</li><li>Pen down Primary and Secondary keywords</li><li>Write all possible designations which are specific only to that Job. (Note: Designations are included in the Boolean only if it can impact the search, otherwise not)</li><li>Use the power of NOT to avoid repetitive/unwanted resumes</li></ul></h6></span><br><br>")},500);
+     setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I hope you found this useful</h6></span><br><br>")},1500);
+setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I’m thinking of having a weekly Q&A with recruiters, try to answer their queries by one of our fellows or by Industry experts, would you like to join the loop?</h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, but how can I put my Qs?</button></div></center>")},3500);
+  }
+  else if(name.indexOf("Sure, but how can I put my Qs?")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>It’s pretty simple, everything via a mail</h6></span><br><br>")},500);
+     setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I will mail you with further details on this & also knock your mail box once I go live.</h6></span><br><br>")},1500);
+setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>If you have any other queries you can reach out to our CEO directly at ashfaq@fellowapp.com</h6></span><br><br>")},2500);
+setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>It was a pleasure talking to you, have a great day. Looking forward to join you as your assistan very soon. :)</h6></span><br><br>")},3500);
+
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Ciao, it was great talking to you</button></div></center>")},4500);
+  }
+ else if(name.indexOf("Ciao, it was great talking to you")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Same here !!</h6></span><br><br>")},500);
+     setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Take care  </h6></span><br><br>")},1500);
+
+ }
+  else if(name.indexOf("No Thanks")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Ouchh !! That was sad :( </h6></span><br><br>")},500);
+    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I’m little curious to know more about you, can I buy some more time of yours?</h6></span><br><br>")},1500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},2500);
+  }
+   else if(name.indexOf("Sorry I gotta go")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I understand you’re running short of time</h6></span><br><br>")},500);
+     setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>You can write to me or my team directly at admin@fellowapp.com or you can also say hello to our CEO at ashfaq@fellowapp.co</h6></span><br><br>")},1500);
+ setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Have a great day!!</h6></span><br><br>")},2500);
+ }
+ else if(name.indexOf("Job App")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, let me give you a small brief about me.</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Now it’s your turn to lend me your ears</h6></span><br><br>")},1500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Haha Sure, shoot out</button></div></center>")},2500);
+
+ }
+ else if(name.indexOf("Contextual Interaction")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, let me give you a small brief about me.</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Now it’s your turn to lend me your ears</h6></span><br><br>")},1500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Haha Sure, shoot out</button></div></center>")},2500);
+
+ }
+
+
+  else if(name.indexOf("Sure you Can")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, tell me more about you, what kind of recruiter are you?</h6></span><br><br>")},500);
+    setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sourcer</button>   <button class='w3-button w3-green w3-hover-green'>Non Sourcer</button></div></center>")},1500);
+   }
+
+   else  if(name.indexOf("So how can you help me")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here you go, this is what I can do for you<ul><li>I can screen candidates on your behalf with basic questions</li><li>After my interaction, I handover the candidates to you for further chat</li><li>Remind you about your Interviews</li><li>Serve you with analytical insights</li></ul></h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>By the way, what's your thoughts on AI/Bot taking over recruitment, do you agree?</h6></span><br><br>")},1500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Yes I Agree</button>   <button class='w3-button w3-green w3-hover-green'>I Disagree</button> <button class='w3-button w3-green w3-hover-green'>Maybe</button></div></center>")},2500);
+   }
+    else  if(name.indexOf("Yes I Agree") !=-1 || name.indexOf("Maybe")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>aahh not at all, being a bot myself I strongly disagree with this notion of AI taking over recruitment completely</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Rather, AI/Bot can make a recruiter's world better, be a Fellow to help them.</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So how about having me as your Fellow (assistant)? Trust me, I'am not taking away your Job ;) </h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Yes Ofcourse</button>   <button class='w3-button w3-green w3-hover-green'>No Thanks</button></div></center>")},3500);
+   }
+   else  if(name.indexOf("I Disagree")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, you're bang on buddy ;) </h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>AI/Bots are here to make a recruiter's world better, be a Fellow to help them.</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So smarty, Would you like to have me as your assistant?</h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Yes Ofcourse</button>   <button class='w3-button w3-green w3-hover-green'>No Thanks</button></div></center>")},3500);
+   }
+
+  else  if(name.indexOf("Yes Ofcourse")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hurray, that means a lot to me. I’m all excited to be your assistant.</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>But unfortunately, you got to wait for couple of weeks as I’m currently in an alpha testing mode.</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hey, how about letting you know once I go live and helping you get some Bonus for being an early user? If that sounds like a deal, shoot me out your mail ID.</h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  mail2' placeholder='Please enter your ID and Press Enter'></textarea></center>")},3500);
+
+ }
+else if(name.indexOf("Recruiter")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, you know my Inventor is also a recruiter & he designed me to help recruiters.</h6></span><br><br>")},500);
+    setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>So how can you help me?</button></div></center>")},1500);
+   }
+  else if(name.indexOf("Do you have more info?")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Well, not really</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>But I can ask my team reach out to you.</h6></span><br><br>")},1500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Can I have your mail ID?</h6></span><br><br>")},2500);
+   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  mail1' placeholder='Please enter your ID and Press Enter'></textarea></center>")},3500);
+
+ }
+
+ else  if(name.indexOf("Let me say")!=-1)
+   {
+     $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Wooaah, all my ears turned on. Go ahead</h6></span><br><br>")},500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  letmesay' placeholder='Start Typing and Press Enter'></textarea></center>")},1500);
+
+   }
+   else if(name.indexOf("Explorer")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I love explorers, I believe they’re smart</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So Mr.Explorer, what do you think about this app?</h6></span><br><br>")},1500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  explorer' placeholder='Start Typing and Press Enter'></textarea></center>")},2500);
+  }
+    else if(name.indexOf("Haha Yes That's Right")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I know, it becomes little tedious sometimes when you have to screen, schedule so many folks over a call.</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I think, that’s where I can assist you and lessen your burden</h6></span><br><br>")},1500);
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Do you have anything else in mind with which I can help you?</h6></span><br><br>")},2500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  nonsource1' placeholder='Start Typing and Press Enter'></textarea></center>")},3500);
+  }
+
+
+
+  else if(name.indexOf("Non Sourcer")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Oh that’s nice, I believe you must be the go-to person for candidate engagement?</h6></span><br><br>")},500);
+ setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Haha Yes That's Right</button></div></center>")},1500);
+  }
+  else if(name.indexOf("Sourcer")!=-1)
+   {
+   $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
+
+   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Oh nice, I just lover sourcers</h6></span><br><br>")},500);
+     setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Are you comfortable with Boolean?</h6></span><br><br>")},1500);
+    setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Very Much</button>   <button class='w3-button w3-green w3-hover-green'>Not Really, I can try</button></div></center>")},2500);
+  }
+
+
+
+  });
+
+$j('body').on( "keypress", ".w3-input.w3-border.explorer", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	if(text.match(/[A-Z]+/gi))
+	{
+	console.log(text.length);
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Uhmm nice. No worries my team will unveil the puzzle soon</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>But yeah, how would you like to see this app?</h6></span><br><br>")},1500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Job App</button> <button class='w3-button w3-green w3-hover-green'>Let me say</button></div></center>")},2500);
+	}
+
+	}
+});
+
+$j('body').on( "keypress", ".w3-input.w3-border.nonsource1", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	if(text.match(/[A-Z]+/gi))
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Uhmm, I’m not sure on this</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>But I can ask my team reach out to you.</h6></span><br><br>")},1500);
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Can I have your mail ID?</h6></span><br><br>")},2500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  nonsource2' placeholder='Please enter your ID and Press Enter'></textarea></center>")},3500);
+	}
+	}
+
+});
+
+
+$j('body').on( "keypress", ".w3-input.w3-border.nonsource2", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	if(text.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi))
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>That’s great</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hey, I’m thinking of having a weekly Q&A with recruiters</h6></span><br><br>")},1500);
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Try to answer their queries by one of our fellows or by Industry experts, would you like to join the loop?</h6></span><br><br>")},2500);
+ setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure, but how can I put my Qs?</button></div></center>")},3500);
+
+	}
+	else
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hey, I guess you miss typed your ID, can you shoot it again?</h6></span><br><br>")},500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  nonsource2' placeholder='Please enter your ID and Press Enter'></textarea></center>")},1500);
+
+	}
+
+	}
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+$j('body').on( "keypress", ".w3-input.w3-border.letmesay", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	if(text.match(/[A-Z]+/gi))
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Cool, let me give you a small brief about me.</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Now it’s your turn to lend me your ears</h6></span><br><br>")},1500);
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Haha Sure, shoot out</button></div></center>")},2500);
+	}
+	}
+});
+
+$j('body').on( "keypress", ".w3-input.w3-border.mail1", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	if(text.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi))
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>That’s great</h6></span><br><br>")},500);
+   setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>By the way, you can reach out to my CEO directly at ashfaq@fellowapp.co. I believe, he would love to connect with you.</h6></span><br><br>")},1500);
+	   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Ciao, it was great talking to you</button></div></center>")},2500);
+	}
+	else
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hey, I guess you miss typed your ID, can you shoot it again?</h6></span><br><br>")},500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  mail1' placeholder='Please enter your ID and Press Enter'></textarea></center>")},1500);
+	}
+	}
+
+});
+
+$j('body').on( "keypress", ".w3-input.w3-border.mail2", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	if(text.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi))
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+    setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6> Woahh !! </h6></span><br><br>")},500);
+    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I’m just curious to know more about you, can I buy some more time of yours?</h6></span><br><br>")},1500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Sure you Can</button>   <button class='w3-button w3-green w3-hover-green'>Sorry I gotta go</button></div></center>")},2500);
+	}
+	else
+	{
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+     setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hey, I guess you miss typed your ID, can you shoot it again?</h6></span><br><br>")},500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<br><center><textarea  class='w3-light-grey w3-input w3-border  mail2' placeholder='Please enter your ID and Press Enter'></textarea></center>")},1500);
+	}
+
+
+	}
+
+});
+
+
+$j('body').on( "keypress", ".w3-input.w3-border.boolean", function( event ) {
+    if(event.which==13)
+	{
+	var text=$j( this ).val()
+	var words=text.split(/\(|\)|OR|AND/gi);
+	var words1=new Array();
+	for(var i=0;i<words.length;i++)
+	{
+	console.log(words[i]);
+	words[i]=words[i].trim();
+	if(words[i]=="" || words[i]==" " || words[i].length==0)
+	{
+	console.log("empty");
+	//words.splice(i,1);
+	}
+	else
+	{
+	words1.push(words[i]);
+	}
+	}
+	console.log(words1);
+	//if(!text.match(/[A-Z]+/gi))
+	//{
+
+	//}
+	if(words1.length>=5 && text.toUpperCase().indexOf("(")!=-1 && text.toUpperCase().indexOf(")")!=-1 && text.toUpperCase().indexOf("AND")!=-1 && text.toUpperCase().indexOf("OR")!=-1)
+	{
+	var bool=""
+   if(localStorage.getItem("search")=="Naukri")
+   {
+   console.log(localStorage.getItem("search"));
+   if(localStorage.getItem("skill")=="Android")
+   bool="((Java AND Android AND SDK AND (‘Mobile app’ OR ‘Mobile apps’ OR ‘Android apps’ OR Playstore OR ‘Play store’ OR ‘Mobile application’ OR ‘Android application’ OR ‘Android app’ OR ‘Android Studio’))  OR ‘Android developer’ OR ‘Android engineer’ OR ‘Android app developer’ OR ‘Android Application developer’ OR ‘Android Application engineer’ OR ‘Android Application Development’ OR ‘Android app development’ OR ‘Android mobile application’)"
+   else if(localStorage.getItem("skill")=="Nodejs + Nosql")
+   bool="(Nodejs OR Node OR MEAN) AND (API OR Webservices OR Rest OR Restful OR SOAP OR getapi OR Postapi OR ‘Get api’ OR ‘Post API’) AND (Nosql OR Mongo OR Mongodb OR Couch OR Couchdb OR Maria OR Mariadb OR Cassandra OR Documentdb)"
+   else if(localStorage.getItem("skill")=="UI + Any JS")
+   bool="(‘UI Developer’ OR ‘UI Engineer’ OR ‘Frontend developer’ OR ‘Front end Engineer’ OR ‘Front end developer’ OR ‘Frontend engineer’ OR ‘UX Engineer’ OR ‘UX Developer’) AND (Angular OR Angularjs OR React OR Reactjs OR angular1 OR angular2 OR Typescript) "
+   }
+   else if(localStorage.getItem("search")=="LinkedIn")
+   {
+   console.log(localStorage.getItem("search"));
+   if(localStorage.getItem("skill")=="Android")
+   bool="((Java AND Android AND SDK AND (‘Mobile app’ OR ‘Mobile apps’ OR ‘Android apps’ OR Playstore OR ‘Play store’ OR ‘Mobile application’ OR ‘Android application’ OR ‘Android app’ OR ‘Android Studio’))  OR ‘Android developer’ OR ‘Android engineer’ OR ‘Android app developer’ OR ‘Android Application developer’ OR ‘Android Application engineer’ OR ‘Android Application Development’’ OR ‘Android app development’ OR ‘Android mobile application’) NOT (Recruiter OR Hiring OR Talent OR ios)"
+   else if(localStorage.getItem("skill")=="Nodejs + Nosql")
+   bool="(Nodejs OR Node OR MEAN) AND (API OR Webservices OR Rest OR Restful OR SOAP OR getapi OR Postapi OR ‘Get api’ OR ‘Post API’) AND (Nosql OR Mongo OR Mongodb OR Couch OR Couchdb OR Maria OR Mariadb OR Cassandra OR Documentdb) NOT (Recruiter OR Hiring OR Talent)"
+   else if(localStorage.getItem("skill")=="UI + Any JS")
+   bool="(‘UI Developer’ OR ‘UI Engineer’ OR ‘Frontend developer’ OR ‘Front end Engineer’ OR ‘Front end developer’ OR ‘Frontend engineer’ OR ‘UX Engineer’ OR ‘UX Developer’) AND (Angular OR Angularjs OR React OR Reactjs OR angular1 OR angular2 OR Typescript) NOT (Recruiter OR Hiring OR Talent)"
+   }
+  $j('.w3-input.w3-border').remove();
+  $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+  setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So you’re not gonna leave without testing me uh? ;)</h6></span><br><br>")},500);
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Listen, generally there are multiple ways of writing a Boolean. So worry not if you have not written just exactly the way I have written</h6></span><br><br>")},1500)
+  setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Here you go, this is what I wrote</h6></span><br><br>")},2500)
+
+setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>"+bool+"</h6></span><br><br>")},3500)
+
+
+  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Can you explain how you wrote this?</button></div></center>")},4500);
+	}
+	else
+    {
+	$j('.w3-input.w3-border').remove();
+	$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
+    setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hmmm, are you sure with Boolean?</h6></span><br><br>")},500);
+    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I can guide you otherwise.</h6></span><br><br>")},1500);
+	setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>Kindly Guide</button>   <button class='w3-button w3-green w3-hover-green'>Let me write again</button></div></center>")},2500);
+	}
+	}
+
+});
+
+function first()
+{
+var beginning=["Hey There!!","I am your Fellow, just wondering how I can help you","May I know who you are?"];
+if(i<=2)
+{
+document.getElementById('status').innerHTML="typing...";
+$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>"+beginning[i]+"</h6></span><br><br>");
+i++;
+}
+else
+{
+document.getElementById('status').innerHTML="online";
+console.log("stopping")
+clearInterval(interval);
+$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>I am a Recruiter</button>     <button class='w3-button w3-green w3-hover-green'>I am an Explorer</button></div></center>");
+}
+}
+</script>
+<!--<video width="320" height="320" controls><source src="video.mp4" type="video/mp4"></video>-->
+
+
+</body>
+</html>

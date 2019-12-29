@@ -1,0 +1,27 @@
+
+<div class="container" ng-controller="notification" ng-init="loadNotifications();">
+    <h2>Notifications</h2>
+    <div class="notifications">
+
+            <div class="notification"  ng-repeat="x in notificationList">
+<!--                <i class="icon" aria-hidden="true" style="background-color: darkseagreen;">💶</i>-->
+                
+                <i class="icon" aria-hidden="true" style="background-color:red;color:white;"><span class="fa fa-ambulance"></span></i>
+                <div class="notification-content">
+                    <div class="header">
+                        <h6 class="title" id="dialog-element-369-label">{{x.message}}</h6>
+                        <p class="time">{{getDate(x.created_at)}}</div>    
+                         <p class="message">{{x.author}}</p>
+                    </div>
+                </div>
+                
+            <div class="notification" ng-show="noNotification">
+                <i class="icon" aria-hidden="true" style="background-color:#29b7d3;color:white;"><i class="fa fa-exclamation-triangle"></i></i>
+                <div class="notification-content">
+                    <div class="header">
+                       <h3 class="text-center">No Notifications</h3>
+                    </div>
+                </div>    
+        </div>         
+</div>
+</div>

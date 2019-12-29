@@ -1,0 +1,36 @@
+.brand{
+    display: inline-block;
+}
+.navbar-nav{
+    margin: 0px;
+}
+h2{
+    margin-bottom: 25px;
+}
+.table th{
+	background:#2d2b32;
+    color: white;
+}
+.dropdown-menu{
+    position: absolute;
+    background: white;
+}
+.brand:hover{
+    text-decoration: none;
+}
+.box-body{
+    padding:10px !important;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    padding:15px 8px;  
+    text-transform: capitalize;
+}
+.table{
+    margin-bottom: 0px;
+}
+.content,#map{
+        min-height: calc(100vh - 191px);
+}
+#map{
+        min-height: calc(100vh - 250px);    
+}

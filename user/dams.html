@@ -1,0 +1,49 @@
+<div ng-controller="dams" ng-init="loadDams();">
+     <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+              <div class="box">
+                  <div class="box-header">
+                      <h2 >Dams</h2>
+                  </div>
+                 
+            <div class="box-body">
+              <table id="batch_attendance_table" class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                  <th>Dam ID</th>
+                  <th>Dam Name</th>
+                  <th>O & M BY</th>
+                  <th>River</th>
+                  <th>Near. City</th>
+                </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr ng-repeat="x in dams">
+                        <td>{{x.id}}</td>
+                        <td>{{x.name_of_dam|uppercase}}</td>
+                        <td>{{x.operated_and_maintained_by}}</td>
+                        <td>{{x.river}}</td>
+                        <td>{{x.nearest_city}}</td>
+                    </tr>
+                </tbody>
+<!--
+                <tfoot>
+                <tr>
+                 <th>Dam ID</th>
+                  <th>Dam Name</th>
+                  <th>O & M BY</th>
+                  <th>River</th>
+                  <th>Near. City</th>
+                </tr>
+                </tfoot>
+-->
+              </table>
+            </div> 
+              </div>
+          </div> 
+            
+        </div>
+</section>
+</div>

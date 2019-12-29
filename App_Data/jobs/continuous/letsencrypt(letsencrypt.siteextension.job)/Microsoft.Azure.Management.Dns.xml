@@ -1,0 +1,3324 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.Management.Dns</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.Management.Dns.DnsManagementClient">
+            <summary>
+            The DNS Management Client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.Credentials">
+            <summary>
+            Credentials needed for the client to connect to Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.SubscriptionId">
+            <summary>
+            Specifies the Azure subscription ID, which uniquely identifies the
+            Microsoft Azure subscription.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.ApiVersion">
+            <summary>
+            Specifies the API version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.AcceptLanguage">
+            <summary>
+            The preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            The retry timeout in seconds for Long Running Operations. Default value is
+            30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.GenerateClientRequestId">
+            <summary>
+            Whether a unique x-ms-client-request-id should be generated. When set to
+            true a unique x-ms-client-request-id value is generated and included in
+            each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.RecordSets">
+            <summary>
+            Gets the IRecordSetsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.Zones">
+            <summary>
+            Gets the IZonesOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsManagementClient.DnsResourceReference">
+            <summary>
+            Gets the IDnsResourceReferenceOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Net.Http.HttpClient,System.Boolean)">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='httpClient'>
+            HttpClient to be used
+            </param>
+            <param name='disposeHttpClient'>
+            True: will dispose the provided httpClient on calling DnsManagementClient.Dispose(). False: will not dispose provided httpClient</param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Uri,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Uri,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClient,System.Boolean)">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='httpClient'>
+            HttpClient to be used
+            </param>
+            <param name='disposeHttpClient'>
+            True: will dispose the provided httpClient on calling DnsManagementClient.Dispose(). False: will not dispose provided httpClient</param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the DnsManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsManagementClient.Initialize">
+            <summary>
+            Initializes client properties.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperations">
+            <summary>
+            DnsResourceReferenceOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperations.#ctor(Microsoft.Azure.Management.Dns.DnsManagementClient)">
+            <summary>
+            Initializes a new instance of the DnsResourceReferenceOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperations.Client">
+            <summary>
+            Gets a reference to the DnsManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperations.GetByTargetResourcesWithHttpMessagesAsync(System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Returns the DNS records specified by the referencing targetResourceIds.
+            </summary>
+            <param name='targetResources'>
+            A list of references to azure resources for which referencing dns records
+            need to be queried.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperationsExtensions">
+            <summary>
+            Extension methods for DnsResourceReferenceOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperationsExtensions.GetByTargetResources(Microsoft.Azure.Management.Dns.IDnsResourceReferenceOperations,System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource})">
+            <summary>
+            Returns the DNS records specified by the referencing targetResourceIds.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='targetResources'>
+            A list of references to azure resources for which referencing dns records
+            need to be queried.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.DnsResourceReferenceOperationsExtensions.GetByTargetResourcesAsync(Microsoft.Azure.Management.Dns.IDnsResourceReferenceOperations,System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource},System.Threading.CancellationToken)">
+            <summary>
+            Returns the DNS records specified by the referencing targetResourceIds.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='targetResources'>
+            A list of references to azure resources for which referencing dns records
+            need to be queried.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.IDnsManagementClient">
+            <summary>
+            The DNS Management Client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.Credentials">
+            <summary>
+            Credentials needed for the client to connect to Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.SubscriptionId">
+            <summary>
+            Specifies the Azure subscription ID, which uniquely identifies the
+            Microsoft Azure subscription.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.ApiVersion">
+            <summary>
+            Specifies the API version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.AcceptLanguage">
+            <summary>
+            The preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            The retry timeout in seconds for Long Running Operations. Default
+            value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.GenerateClientRequestId">
+            <summary>
+            Whether a unique x-ms-client-request-id should be generated. When
+            set to true a unique x-ms-client-request-id value is generated and
+            included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.RecordSets">
+            <summary>
+            Gets the IRecordSetsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.Zones">
+            <summary>
+            Gets the IZonesOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.IDnsManagementClient.DnsResourceReference">
+            <summary>
+            Gets the IDnsResourceReferenceOperations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.IDnsResourceReferenceOperations">
+            <summary>
+            DnsResourceReferenceOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IDnsResourceReferenceOperations.GetByTargetResourcesWithHttpMessagesAsync(System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Returns the DNS records specified by the referencing
+            targetResourceIds.
+            </summary>
+            <param name='targetResources'>
+            A list of references to azure resources for which referencing dns
+            records need to be queried.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.IRecordSetsOperations">
+            <summary>
+            RecordSetsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.UpdateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Updates a record set within a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include:
+            'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the
+            current record set. Specify the last-seen etag value to prevent
+            accidentally overwritting concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a record set within a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA
+            can be updated but not created (they are created when the DNS zone
+            is created). Possible values include: 'A', 'AAAA', 'CAA', 'CNAME',
+            'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the
+            current record set. Specify the last-seen etag value to prevent
+            accidentally overwritting any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new record set to be created, but to prevent
+            updating an existing record set. Other values will be ignored.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a record set from a DNS zone. This operation cannot be
+            undone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA
+            cannot be deleted (they are deleted when the DNS zone is deleted).
+            Possible values include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS',
+            'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always delete the
+            current record set. Specify the last-seen etag value to prevent
+            accidentally deleting any concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a record set.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include:
+            'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.ListByTypeWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Nullable{System.Int32},System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='recordType'>
+            The type of record sets to enumerate. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified,
+            returns up to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to
+            filter the record set enumerations. If this parameter is specified,
+            Enumeration will return only records that end with
+            .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.ListByDnsZoneWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified,
+            returns up to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to
+            filter the record set enumerations. If this parameter is specified,
+            Enumeration will return only records that end with
+            .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.ListAllByDnsZoneWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified,
+            returns up to 100 record sets.
+            </param>
+            <param name='recordSetNameSuffix'>
+            The suffix label of the record set name that has to be used to
+            filter the record set enumerations. If this parameter is specified,
+            Enumeration will return only records that end with
+            .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.ListByTypeNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.ListByDnsZoneNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IRecordSetsOperations.ListAllByDnsZoneNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.IZonesOperations">
+            <summary>
+            ZonesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Dns.Models.Zone,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a DNS zone. Does not modify DNS records within
+            the zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the
+            current zone. Specify the last-seen etag value to prevent
+            accidentally overwritting any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new DNS zone to be created, but to prevent
+            updating an existing zone. Other values will be ignored.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also
+            be deleted. This operation cannot be undone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the
+            current zone. Specify the last-seen etag value to prevent
+            accidentally deleting any concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.GetWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a DNS zone. Retrieves the zone properties, but not the record
+            sets within the zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.UpdateWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the
+            current zone. Specify the last-seen etag value to prevent
+            accidentally overwritting any concurrent changes.
+            </param>
+            <param name='tags'>
+            Resource tags.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.ListByResourceGroupWithHttpMessagesAsync(System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified,
+            returns up to 100 record sets.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.ListWithHttpMessagesAsync(System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='top'>
+            The maximum number of DNS zones to return. If not specified,
+            returns up to 100 zones.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.BeginDeleteWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also
+            be deleted. This operation cannot be undone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the
+            current zone. Specify the last-seen etag value to prevent
+            accidentally deleting any concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.ListByResourceGroupNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.IZonesOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.AaaaRecord">
+            <summary>
+            An AAAA record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.AaaaRecord.#ctor">
+            <summary>
+            Initializes a new instance of the AaaaRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.AaaaRecord.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the AaaaRecord class.
+            </summary>
+            <param name="ipv6Address">The IPv6 address of this AAAA
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.AaaaRecord.Ipv6Address">
+            <summary>
+            Gets or sets the IPv6 address of this AAAA record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.ARecord">
+            <summary>
+            An A record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.ARecord.#ctor">
+            <summary>
+            Initializes a new instance of the ARecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.ARecord.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ARecord class.
+            </summary>
+            <param name="ipv4Address">The IPv4 address of this A
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.ARecord.Ipv4Address">
+            <summary>
+            Gets or sets the IPv4 address of this A record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.CaaRecord">
+            <summary>
+            A CAA record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.CaaRecord.#ctor">
+            <summary>
+            Initializes a new instance of the CaaRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.CaaRecord.#ctor(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Initializes a new instance of the CaaRecord class.
+            </summary>
+            <param name="flags">The flags for this CAA record as an integer
+            between 0 and 255.</param>
+            <param name="tag">The tag for this CAA record.</param>
+            <param name="value">The value for this CAA record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.CaaRecord.Flags">
+            <summary>
+            Gets or sets the flags for this CAA record as an integer between 0
+            and 255.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.CaaRecord.Tag">
+            <summary>
+            Gets or sets the tag for this CAA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.CaaRecord.Value">
+            <summary>
+            Gets or sets the value for this CAA record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.CnameRecord">
+            <summary>
+            A CNAME record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.CnameRecord.#ctor">
+            <summary>
+            Initializes a new instance of the CnameRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.CnameRecord.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the CnameRecord class.
+            </summary>
+            <param name="cname">The canonical name for this CNAME
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.CnameRecord.Cname">
+            <summary>
+            Gets or sets the canonical name for this CNAME record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.DnsResourceReference">
+            <summary>
+            Represents a single Azure resource and its referencing DNS records.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.DnsResourceReference.#ctor">
+            <summary>
+            Initializes a new instance of the DnsResourceReference class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.DnsResourceReference.#ctor(System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource},Microsoft.Azure.Management.Dns.Models.SubResource)">
+            <summary>
+            Initializes a new instance of the DnsResourceReference class.
+            </summary>
+            <param name="dnsResources">A list of dns Records </param>
+            <param name="targetResource">A reference to an azure resource from
+            where the dns resource value is taken.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.DnsResourceReference.DnsResources">
+            <summary>
+            Gets or sets a list of dns Records
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.DnsResourceReference.TargetResource">
+            <summary>
+            Gets or sets a reference to an azure resource from where the dns
+            resource value is taken.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceRequest">
+            <summary>
+            Represents the properties of the Dns Resource Reference Request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceRequest.#ctor">
+            <summary>
+            Initializes a new instance of the DnsResourceReferenceRequest
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceRequest.#ctor(System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource})">
+            <summary>
+            Initializes a new instance of the DnsResourceReferenceRequest
+            class.
+            </summary>
+            <param name="targetResources">A list of references to azure
+            resources for which referencing dns records need to be
+            queried.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceRequest.TargetResources">
+            <summary>
+            Gets or sets a list of references to azure resources for which
+            referencing dns records need to be queried.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceResult">
+            <summary>
+            Represents the properties of the Dns Resource Reference Result.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceResult.#ctor">
+            <summary>
+            Initializes a new instance of the DnsResourceReferenceResult class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceResult.#ctor(System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.DnsResourceReference})">
+            <summary>
+            Initializes a new instance of the DnsResourceReferenceResult class.
+            </summary>
+            <param name="dnsResourceReferences">The result of dns resource
+            reference request. A list of dns resource references for each of
+            the azure resource in the request</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.DnsResourceReferenceResult.DnsResourceReferences">
+            <summary>
+            Gets or sets the result of dns resource reference request. A list
+            of dns resource references for each of the azure resource in the
+            request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.MxRecord">
+            <summary>
+            An MX record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.MxRecord.#ctor">
+            <summary>
+            Initializes a new instance of the MxRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.MxRecord.#ctor(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the MxRecord class.
+            </summary>
+            <param name="preference">The preference value for this MX
+            record.</param>
+            <param name="exchange">The domain name of the mail host for this MX
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.MxRecord.Preference">
+            <summary>
+            Gets or sets the preference value for this MX record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.MxRecord.Exchange">
+            <summary>
+            Gets or sets the domain name of the mail host for this MX record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.NsRecord">
+            <summary>
+            An NS record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.NsRecord.#ctor">
+            <summary>
+            Initializes a new instance of the NsRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.NsRecord.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the NsRecord class.
+            </summary>
+            <param name="nsdname">The name server name for this NS
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.NsRecord.Nsdname">
+            <summary>
+            Gets or sets the name server name for this NS record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.Page`1">
+            <summary>
+            Defines a page in Azure responses.
+            </summary>
+            <typeparam name="T">Type of the page content items</typeparam>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Page`1.NextPageLink">
+            <summary>
+            Gets the link to the next page.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Page`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Page`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.PtrRecord">
+            <summary>
+            A PTR record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.PtrRecord.#ctor">
+            <summary>
+            Initializes a new instance of the PtrRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.PtrRecord.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the PtrRecord class.
+            </summary>
+            <param name="ptrdname">The PTR target domain name for this PTR
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.PtrRecord.Ptrdname">
+            <summary>
+            Gets or sets the PTR target domain name for this PTR record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.RecordSet">
+            <summary>
+            Describes a DNS record set (a collection of DNS records with the same
+            name and type).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.RecordSet.#ctor">
+            <summary>
+            Initializes a new instance of the RecordSet class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.RecordSet.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int64},System.String,System.String,Microsoft.Azure.Management.Dns.Models.SubResource,System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.ARecord},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.AaaaRecord},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.MxRecord},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.NsRecord},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.PtrRecord},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SrvRecord},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.TxtRecord},Microsoft.Azure.Management.Dns.Models.CnameRecord,Microsoft.Azure.Management.Dns.Models.SoaRecord,System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.CaaRecord})">
+            <summary>
+            Initializes a new instance of the RecordSet class.
+            </summary>
+            <param name="id">The ID of the record set.</param>
+            <param name="name">The name of the record set.</param>
+            <param name="type">The type of the record set.</param>
+            <param name="etag">The etag of the record set.</param>
+            <param name="metadata">The metadata attached to the record
+            set.</param>
+            <param name="tTL">The TTL (time-to-live) of the records in the
+            record set.</param>
+            <param name="fqdn">Fully qualified domain name of the record
+            set.</param>
+            <param name="provisioningState">provisioning State of the record
+            set.</param>
+            <param name="targetResource">A reference to an azure resource from
+            where the dns resource value is taken.</param>
+            <param name="aRecords">The list of A records in the record
+            set.</param>
+            <param name="aaaaRecords">The list of AAAA records in the record
+            set.</param>
+            <param name="mxRecords">The list of MX records in the record
+            set.</param>
+            <param name="nsRecords">The list of NS records in the record
+            set.</param>
+            <param name="ptrRecords">The list of PTR records in the record
+            set.</param>
+            <param name="srvRecords">The list of SRV records in the record
+            set.</param>
+            <param name="txtRecords">The list of TXT records in the record
+            set.</param>
+            <param name="cnameRecord">The CNAME record in the  record
+            set.</param>
+            <param name="soaRecord">The SOA record in the record set.</param>
+            <param name="caaRecords">The list of CAA records in the record
+            set.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.Id">
+            <summary>
+            Gets the ID of the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.Name">
+            <summary>
+            Gets the name of the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.Type">
+            <summary>
+            Gets the type of the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.Etag">
+            <summary>
+            Gets or sets the etag of the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.Metadata">
+            <summary>
+            Gets or sets the metadata attached to the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.TTL">
+            <summary>
+            Gets or sets the TTL (time-to-live) of the records in the record
+            set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.Fqdn">
+            <summary>
+            Gets fully qualified domain name of the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.ProvisioningState">
+            <summary>
+            Gets provisioning State of the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.TargetResource">
+            <summary>
+            Gets or sets a reference to an azure resource from where the dns
+            resource value is taken.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.ARecords">
+            <summary>
+            Gets or sets the list of A records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.AaaaRecords">
+            <summary>
+            Gets or sets the list of AAAA records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.MxRecords">
+            <summary>
+            Gets or sets the list of MX records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.NsRecords">
+            <summary>
+            Gets or sets the list of NS records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.PtrRecords">
+            <summary>
+            Gets or sets the list of PTR records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.SrvRecords">
+            <summary>
+            Gets or sets the list of SRV records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.TxtRecords">
+            <summary>
+            Gets or sets the list of TXT records in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.CnameRecord">
+            <summary>
+            Gets or sets the CNAME record in the  record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.SoaRecord">
+            <summary>
+            Gets or sets the SOA record in the record set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSet.CaaRecords">
+            <summary>
+            Gets or sets the list of CAA records in the record set.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.RecordSetUpdateParameters">
+            <summary>
+            Parameters supplied to update a record set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.RecordSetUpdateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the RecordSetUpdateParameters class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.RecordSetUpdateParameters.#ctor(Microsoft.Azure.Management.Dns.Models.RecordSet)">
+            <summary>
+            Initializes a new instance of the RecordSetUpdateParameters class.
+            </summary>
+            <param name="recordSet">Specifies information about the record set
+            being updated.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.RecordSetUpdateParameters.RecordSet">
+            <summary>
+            Gets or sets specifies information about the record set being
+            updated.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.RecordType">
+            <summary>
+            Defines values for RecordType.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.Resource">
+            <summary>
+            Common properties of an Azure Resource Manager resource
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Resource.#ctor">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Resource.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+            <param name="location">Resource location.</param>
+            <param name="id">Resource ID.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="tags">Resource tags.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Resource.Id">
+            <summary>
+            Gets resource ID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Resource.Name">
+            <summary>
+            Gets resource name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Resource.Type">
+            <summary>
+            Gets resource type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Resource.Location">
+            <summary>
+            Gets or sets resource location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Resource.Tags">
+            <summary>
+            Gets or sets resource tags.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Resource.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.SoaRecord">
+            <summary>
+            An SOA record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.SoaRecord.#ctor">
+            <summary>
+            Initializes a new instance of the SoaRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.SoaRecord.#ctor(System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64})">
+            <summary>
+            Initializes a new instance of the SoaRecord class.
+            </summary>
+            <param name="host">The domain name of the authoritative name server
+            for this SOA record.</param>
+            <param name="email">The email contact for this SOA record.</param>
+            <param name="serialNumber">The serial number for this SOA
+            record.</param>
+            <param name="refreshTime">The refresh value for this SOA
+            record.</param>
+            <param name="retryTime">The retry time for this SOA record.</param>
+            <param name="expireTime">The expire time for this SOA
+            record.</param>
+            <param name="minimumTtl">The minimum value for this SOA record. By
+            convention this is used to determine the negative caching
+            duration.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.Host">
+            <summary>
+            Gets or sets the domain name of the authoritative name server for
+            this SOA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.Email">
+            <summary>
+            Gets or sets the email contact for this SOA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.SerialNumber">
+            <summary>
+            Gets or sets the serial number for this SOA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.RefreshTime">
+            <summary>
+            Gets or sets the refresh value for this SOA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.RetryTime">
+            <summary>
+            Gets or sets the retry time for this SOA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.ExpireTime">
+            <summary>
+            Gets or sets the expire time for this SOA record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SoaRecord.MinimumTtl">
+            <summary>
+            Gets or sets the minimum value for this SOA record. By convention
+            this is used to determine the negative caching duration.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.SrvRecord">
+            <summary>
+            An SRV record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.SrvRecord.#ctor">
+            <summary>
+            Initializes a new instance of the SrvRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.SrvRecord.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the SrvRecord class.
+            </summary>
+            <param name="priority">The priority value for this SRV
+            record.</param>
+            <param name="weight">The weight value for this SRV record.</param>
+            <param name="port">The port value for this SRV record.</param>
+            <param name="target">The target domain name for this SRV
+            record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SrvRecord.Priority">
+            <summary>
+            Gets or sets the priority value for this SRV record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SrvRecord.Weight">
+            <summary>
+            Gets or sets the weight value for this SRV record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SrvRecord.Port">
+            <summary>
+            Gets or sets the port value for this SRV record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SrvRecord.Target">
+            <summary>
+            Gets or sets the target domain name for this SRV record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.SubResource">
+            <summary>
+            A reference to a another resource
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.SubResource.#ctor">
+            <summary>
+            Initializes a new instance of the SubResource class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.SubResource.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the SubResource class.
+            </summary>
+            <param name="id">Resource Id.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.SubResource.Id">
+            <summary>
+            Gets or sets resource Id.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.TxtRecord">
+            <summary>
+            A TXT record.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.TxtRecord.#ctor">
+            <summary>
+            Initializes a new instance of the TxtRecord class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.TxtRecord.#ctor(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Initializes a new instance of the TxtRecord class.
+            </summary>
+            <param name="value">The text value of this TXT record.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.TxtRecord.Value">
+            <summary>
+            Gets or sets the text value of this TXT record.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.Zone">
+            <summary>
+            Describes a DNS zone.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Zone.#ctor">
+            <summary>
+            Initializes a new instance of the Zone class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Zone.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Collections.Generic.IList{System.String},System.Nullable{Microsoft.Azure.Management.Dns.Models.ZoneType},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource},System.Collections.Generic.IList{Microsoft.Azure.Management.Dns.Models.SubResource})">
+            <summary>
+            Initializes a new instance of the Zone class.
+            </summary>
+            <param name="location">Resource location.</param>
+            <param name="id">Resource ID.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="tags">Resource tags.</param>
+            <param name="etag">The etag of the zone.</param>
+            <param name="maxNumberOfRecordSets">The maximum number of record
+            sets that can be created in this DNS zone.  This is a read-only
+            property and any attempt to set this value will be ignored.</param>
+            <param name="numberOfRecordSets">The current number of record sets
+            in this DNS zone.  This is a read-only property and any attempt to
+            set this value will be ignored.</param>
+            <param name="nameServers">The name servers for this DNS zone. This
+            is a read-only property and any attempt to set this value will be
+            ignored.</param>
+            <param name="zoneType">The type of this DNS zone (Public or
+            Private). Possible values include: 'Public', 'Private'</param>
+            <param name="registrationVirtualNetworks">A list of references to
+            virtual networks that register hostnames in this DNS zone. This is
+            a only when ZoneType is Private.</param>
+            <param name="resolutionVirtualNetworks">A list of references to
+            virtual networks that resolve records in this DNS zone. This is a
+            only when ZoneType is Private.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.Etag">
+            <summary>
+            Gets or sets the etag of the zone.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.MaxNumberOfRecordSets">
+            <summary>
+            Gets the maximum number of record sets that can be created in this
+            DNS zone.  This is a read-only property and any attempt to set this
+            value will be ignored.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.NumberOfRecordSets">
+            <summary>
+            Gets the current number of record sets in this DNS zone.  This is a
+            read-only property and any attempt to set this value will be
+            ignored.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.NameServers">
+            <summary>
+            Gets the name servers for this DNS zone. This is a read-only
+            property and any attempt to set this value will be ignored.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.ZoneType">
+            <summary>
+            Gets or sets the type of this DNS zone (Public or Private).
+            Possible values include: 'Public', 'Private'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.RegistrationVirtualNetworks">
+            <summary>
+            Gets or sets a list of references to virtual networks that register
+            hostnames in this DNS zone. This is a only when ZoneType is
+            Private.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.Zone.ResolutionVirtualNetworks">
+            <summary>
+            Gets or sets a list of references to virtual networks that resolve
+            records in this DNS zone. This is a only when ZoneType is Private.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.Zone.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.ZoneType">
+            <summary>
+            Defines values for ZoneType.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.Models.ZoneUpdate">
+            <summary>
+            Describes a request to update a DNS zone.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.ZoneUpdate.#ctor">
+            <summary>
+            Initializes a new instance of the ZoneUpdate class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.Models.ZoneUpdate.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the ZoneUpdate class.
+            </summary>
+            <param name="tags">Resource tags.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.Models.ZoneUpdate.Tags">
+            <summary>
+            Gets or sets resource tags.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.RecordSetsOperations">
+            <summary>
+            RecordSetsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.#ctor(Microsoft.Azure.Management.Dns.DnsManagementClient)">
+            <summary>
+            Initializes a new instance of the RecordSetsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.RecordSetsOperations.Client">
+            <summary>
+            Gets a reference to the DnsManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.UpdateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Updates a record set within a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            overwritting concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a record set within a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA can be
+            updated but not created (they are created when the DNS zone is created).
+            Possible values include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR',
+            'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            overwritting any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new record set to be created, but to prevent updating
+            an existing record set. Other values will be ignored.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a record set from a DNS zone. This operation cannot be undone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA cannot
+            be deleted (they are deleted when the DNS zone is deleted). Possible values
+            include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV',
+            'TXT'
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always delete the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            deleting any concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a record set.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.ListByTypeWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Nullable{System.Int32},System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='recordType'>
+            The type of record sets to enumerate. Possible values include: 'A', 'AAAA',
+            'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.ListByDnsZoneWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.ListAllByDnsZoneWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordSetNameSuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.ListByTypeNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.ListByDnsZoneNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperations.ListAllByDnsZoneNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions">
+            <summary>
+            Extension methods for RecordSetsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.Update(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String)">
+            <summary>
+            Updates a record set within a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            overwritting concurrent changes.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Updates a record set within a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            overwritting concurrent changes.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.String)">
+            <summary>
+            Creates or updates a record set within a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA can be
+            updated but not created (they are created when the DNS zone is created).
+            Possible values include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR',
+            'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            overwritting any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new record set to be created, but to prevent updating
+            an existing record set. Other values will be ignored.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,Microsoft.Azure.Management.Dns.Models.RecordSet,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a record set within a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA can be
+            updated but not created (they are created when the DNS zone is created).
+            Possible values include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR',
+            'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always overwrite the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            overwritting any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new record set to be created, but to prevent updating
+            an existing record set. Other values will be ignored.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.Delete(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.String)">
+            <summary>
+            Deletes a record set from a DNS zone. This operation cannot be undone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA cannot
+            be deleted (they are deleted when the DNS zone is deleted). Possible values
+            include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV',
+            'TXT'
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always delete the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            deleting any concurrent changes.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a record set from a DNS zone. This operation cannot be undone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Record sets of type SOA cannot
+            be deleted (they are deleted when the DNS zone is deleted). Possible values
+            include: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV',
+            'TXT'
+            </param>
+            <param name='ifMatch'>
+            The etag of the record set. Omit this value to always delete the current
+            record set. Specify the last-seen etag value to prevent accidentally
+            deleting any concurrent changes.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.Get(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType)">
+            <summary>
+            Gets a record set.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Threading.CancellationToken)">
+            <summary>
+            Gets a record set.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='relativeRecordSetName'>
+            The name of the record set, relative to the name of the zone.
+            </param>
+            <param name='recordType'>
+            The type of DNS record in this record set. Possible values include: 'A',
+            'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByType(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='recordType'>
+            The type of record sets to enumerate. Possible values include: 'A', 'AAAA',
+            'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByTypeAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,Microsoft.Azure.Management.Dns.Models.RecordType,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='recordType'>
+            The type of record sets to enumerate. Possible values include: 'A', 'AAAA',
+            'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByDnsZone(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByDnsZoneAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordsetnamesuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListAllByDnsZone(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordSetNameSuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListAllByDnsZoneAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.String,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='recordSetNameSuffix'>
+            The suffix label of the record set name that has to be used to filter the
+            record set enumerations. If this parameter is specified, Enumeration will
+            return only records that end with .&lt;recordSetNameSuffix&gt;
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByTypeNext(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByTypeNextAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByDnsZoneNext(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListByDnsZoneNextAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListAllByDnsZoneNext(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.RecordSetsOperationsExtensions.ListAllByDnsZoneNextAsync(Microsoft.Azure.Management.Dns.IRecordSetsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists all record sets in a DNS zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.ZonesOperations">
+            <summary>
+            ZonesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.#ctor(Microsoft.Azure.Management.Dns.DnsManagementClient)">
+            <summary>
+            Initializes a new instance of the ZonesOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Dns.ZonesOperations.Client">
+            <summary>
+            Gets a reference to the DnsManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Dns.Models.Zone,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the current
+            zone. Specify the last-seen etag value to prevent accidentally overwritting
+            any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new DNS zone to be created, but to prevent updating
+            an existing zone. Other values will be ignored.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also be
+            deleted. This operation cannot be undone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the current
+            zone. Specify the last-seen etag value to prevent accidentally deleting any
+            concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.GetWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a DNS zone. Retrieves the zone properties, but not the record sets
+            within the zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.UpdateWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the current
+            zone. Specify the last-seen etag value to prevent accidentally overwritting
+            any concurrent changes.
+            </param>
+            <param name='tags'>
+            Resource tags.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.ListByResourceGroupWithHttpMessagesAsync(System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.ListWithHttpMessagesAsync(System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='top'>
+            The maximum number of DNS zones to return. If not specified, returns up to
+            100 zones.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.BeginDeleteWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also be
+            deleted. This operation cannot be undone.
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the current
+            zone. Specify the last-seen etag value to prevent accidentally deleting any
+            concurrent changes.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.ListByResourceGroupNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions">
+            <summary>
+            Extension methods for ZonesOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,Microsoft.Azure.Management.Dns.Models.Zone,System.String,System.String)">
+            <summary>
+            Creates or updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the current
+            zone. Specify the last-seen etag value to prevent accidentally overwritting
+            any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new DNS zone to be created, but to prevent updating
+            an existing zone. Other values will be ignored.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,Microsoft.Azure.Management.Dns.Models.Zone,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the CreateOrUpdate operation.
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the current
+            zone. Specify the last-seen etag value to prevent accidentally overwritting
+            any concurrent changes.
+            </param>
+            <param name='ifNoneMatch'>
+            Set to '*' to allow a new DNS zone to be created, but to prevent updating
+            an existing zone. Other values will be ignored.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.Delete(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.String)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also be
+            deleted. This operation cannot be undone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the current
+            zone. Specify the last-seen etag value to prevent accidentally deleting any
+            concurrent changes.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also be
+            deleted. This operation cannot be undone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the current
+            zone. Specify the last-seen etag value to prevent accidentally deleting any
+            concurrent changes.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.Get(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String)">
+            <summary>
+            Gets a DNS zone. Retrieves the zone properties, but not the record sets
+            within the zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.GetAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a DNS zone. Retrieves the zone properties, but not the record sets
+            within the zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.Update(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the current
+            zone. Specify the last-seen etag value to prevent accidentally overwritting
+            any concurrent changes.
+            </param>
+            <param name='tags'>
+            Resource tags.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)">
+            <summary>
+            Updates a DNS zone. Does not modify DNS records within the zone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always overwrite the current
+            zone. Specify the last-seen etag value to prevent accidentally overwritting
+            any concurrent changes.
+            </param>
+            <param name='tags'>
+            Resource tags.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListByResourceGroup(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListByResourceGroupAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='top'>
+            The maximum number of record sets to return. If not specified, returns up
+            to 100 record sets.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.List(Microsoft.Azure.Management.Dns.IZonesOperations,System.Nullable{System.Int32})">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='top'>
+            The maximum number of DNS zones to return. If not specified, returns up to
+            100 zones.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='top'>
+            The maximum number of DNS zones to return. If not specified, returns up to
+            100 zones.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.BeginDelete(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.String)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also be
+            deleted. This operation cannot be undone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the current
+            zone. Specify the last-seen etag value to prevent accidentally deleting any
+            concurrent changes.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.BeginDeleteAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a DNS zone. WARNING: All DNS records in the zone will also be
+            deleted. This operation cannot be undone.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group.
+            </param>
+            <param name='zoneName'>
+            The name of the DNS zone (without a terminating dot).
+            </param>
+            <param name='ifMatch'>
+            The etag of the DNS zone. Omit this value to always delete the current
+            zone. Specify the last-seen etag value to prevent accidentally deleting any
+            concurrent changes.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListByResourceGroupNext(Microsoft.Azure.Management.Dns.IZonesOperations,System.String)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListByResourceGroupNextAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones within a resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListNext(Microsoft.Azure.Management.Dns.IZonesOperations,System.String)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Dns.ZonesOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Dns.IZonesOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+    </members>
+</doc>
