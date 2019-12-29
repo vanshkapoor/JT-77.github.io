@@ -184,14 +184,13 @@ function shared(){
     chat.type=user;
 
     if(user.indexOf("Explorer")!=-1){
-      $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6><b>Successfully Logged In.</b></h6></span><br><br>");
+      //$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6><b>Successfully Logged In.</b></h6></span><br><br>");
     //s$j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+text+"</h6></span><br><br>");
        setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Amazing, you seem to be working at "+company+" as "+position+". Glad to know you "+userName+" </h6></span><br><br>")},500);
      setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So "+userName+", what's that you hate the most in your current job hunt scene?</h6></span><br><br>")},1500);
     setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<center><div class='w3-section w3-medium '><button class='w3-button w3-green w3-hover-green'>No POC</button> <button class='w3-button w3-green w3-hover-green'>No Response</button> <button class='w3-button w3-green w3-hover-green'>Others</button></div></center>")},2500);
 }
   else if (user.indexOf("Recruiter")!=-1) {
-    $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6><b>Successfully Logged In.</b></h6></span><br><br>");
   //  $j(nview).append("<br><span class='w3-tag w3-blue w3-round-large ' style='float:right;text-align:right'><h6>"+name+"</h6></span><br><br>");
    setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hoollaa, I’m talking to "+userName+". BTW nice name ;)</h6></span><br><br>")},500);
     setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>So "+userName+", currently I’m in an Alpha testing phase and will be available on an invite only mode in next 30-45Days. I will keep you posted once I go live.</h6></span><br><br>")},1500);
@@ -663,8 +662,6 @@ setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nv
    setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hurray, that means a lot to me. I’m all excited to be your assistant.</h6></span><br><br>")},500);
    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large 'style='text-align:left'><h6>Hey, can I have little more heads-up about you before we go on with our conversation. There’s much more to be discussed & I’m all thrilled :D</h6></span><br><br>")},1500);
    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>You’re just a click away from an amazing conversation.</h6></span><br><br>")},2500);
-   setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<div id='LinkedInButton'><center><img src='lbutt.png' onClick='liAuth()' style='height:40px;width:250px'><br><br><br></center></div>")},4500);
-
  }
 else if(name.indexOf("Recruiter")!=-1)
    {
@@ -700,13 +697,8 @@ else if(name.indexOf("Recruiter")!=-1)
   setTimeout(function(){document.getElementById('status').innerHTML="typing...";$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>It's amazing to have you here Mr/Ms Explorer.</h6></span><br><br>")},500);
    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>I'm your Fellow Bot, I'm being trained to help you explore your next Job move with ease by connecting you to people, not <b>dead Job ads</b>.</h6></span><br><br>")},1500);
    setTimeout(function(){$j(nview).append("<span class='w3-tag w3-light-grey w3-round-large ' style='text-align:left'><h6>Hey, can I have some basic heads-up about you before we go ahead with the conversation? All you've to do is login via LinkedIn.</h6></span><br><br>")},2500);
-   var s = document.createElement("script");
-   s.type = "in/Login";
-   s.src = "https://platform.linkedin.com/in.js";
 
   //setTimeout(function(){document.getElementById('status').innerHTML="online";$j("body").append("<script type='in/Login'> alert('hi');</s"+"cript>")},4500);
-  setTimeout(function(){document.getElementById('status').innerHTML="online";$j(nview).append("<div id='LinkedInButton'><center><img src='lbutt.png' onClick='liAuth()' style='height:40px;width:250px'><br><br><br></center></div>")},4500);
-
   }
     else if(name.indexOf("Haha Yes That's Right")!=-1)
    {
