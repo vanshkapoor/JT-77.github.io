@@ -52,7 +52,6 @@ class MessageShell extends Component{
         , "required": false,
         timestamp:Date.now()
         , "label": "Hey Recruiter, I'm your Fellow Tech Bot. I've been trained to help you understand tech in a Recruiter's context."
-        , onError()
      }
 
      /*obj2={
