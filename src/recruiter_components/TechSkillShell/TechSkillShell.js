@@ -53,7 +53,7 @@ class MessageShell extends Component{
         timestamp:Date.now()
         , "label": "Hey Recruiter, I'm your Fellow Tech Bot. I've been trained to help you understand tech in a Recruiter's context."
      },
-     obj2={
+     /*obj2={
         "id": "775F61A9-4C55-45E5-BE0E-290B7861F364"
         , "element": "Single Choice"
         , "type": "option"
@@ -94,7 +94,7 @@ class MessageShell extends Component{
         else {
             this.linkedinLogin(this.generateAnswerMessage("LinkedIn",true));
         }
-   }
+   }*/
 
 
     facebookLogin(obj){
