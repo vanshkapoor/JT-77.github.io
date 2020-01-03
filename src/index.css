@@ -1,0 +1,289 @@
+.check {
+  width: 30px;
+}
+
+#col-view .table>tbody>tr.highlight{
+  background: #FFFFCC;
+}
+.table {
+  margin-bottom: 0px;
+  background: white;
+}
+
+.table>tbody>tr>td {
+  vertical-align: middle;
+}
+
+input[type=checkbox] {
+  margin: 0px;
+  transform: scale(1.2, 1.2);
+}
+
+
+.options {
+  padding: 5px 0px 10px;
+  margin: 0px;
+}
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.box-body {
+  width: 100%;
+  height: 100%;
+  /* overflow:scroll; */
+}
+
+.box-title {
+  display: inline-block;
+}
+
+.box-header span {
+  padding-top: 15px;
+}
+
+.navbar-inverse {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+.padd_5{
+  padding: 5px;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+.options .form-control{
+  display: inline;
+  width: auto;
+}
+.nav-links .title{
+  color:black;
+  width: calc(100% - 45px);
+  float: left;
+  padding-top: 5px;
+}
+.nav-links{
+  list-style: none;
+  margin:0px;
+  padding:12px 0px;
+  width: 100%; 
+}
+.nav-links a{
+  padding:6px 0px;
+  display: block;
+  color:#2997FF;
+}
+.nav-links .icon{
+  width: 45px;
+  font-size:22px;
+  /* padding:10px;  */
+  float: left;
+}
+
+.current-chat{
+ width: calc(100% - 350px);
+ float: left;
+ /* margin: auto; */
+ height: 100%;
+}
+
+@media(max-width:1200px){
+  .open-info .current-chat-profile{
+    width:250px !important;
+  }
+  .open-info #messages-list{
+    width:calc(100% - 250px) !important;
+  }
+  .open-info .direct-chat-msg{
+    padding-right:20%; 
+  } 
+  .open-info .direct-chat-msg.msg_right{
+   padding-left:20%;
+   padding-right: 0px;
+   }
+
+  .current-chat{
+    width: calc(100% - 280px) !important;
+  }
+  .chat-list{
+   width:280px !important; 
+  }
+}
+
+
+
+@media(max-width:1024px){
+  .toggleHome{
+      display:inline;
+  }
+  .nav-bar-manag{
+      padding-left: 0px;
+  }
+  
+}
+
+
+@media(max-width:992px){
+ .container-fluid,.new_job_section{
+  width:100%;
+  padding:0px;
+ }
+  .candidate{
+      width: 100%;
+      padding: 0px;
+  }
+  .posts_section{
+      width:100%;
+  }
+  
+  .toggleHome{
+      display: inline;
+  }
+  .nav_bar{
+      width:230px;
+      padding:10px;
+      position:fixed;
+      left: 0px;
+      top:50px;
+      z-index:1000;
+      border-right:1px solid #ccc;
+      height:100%;
+      overflow:auto;
+      background:#eee;
+      transition: 0.5s;
+/*        display:none;*/
+  }
+  .open-info .current-chat-profile{
+    width:200px !important;
+  }
+  .open-info #messages-list{
+    width:calc(100% - 200px) !important;
+  }
+}
+
+
+@media(max-width:950px){
+  .direct-chat-msg{
+    padding-right:20%; 
+ }
+ .direct-chat-msg.msg_right{
+    padding-left:20%;
+    padding-right: 0px;
+ }
+}
+
+@media(max-width:767px){
+
+  .open-info .current-chat-profile{
+    position:absolute;
+    z-index:10;
+    right:0px;
+    background: white;
+    border: none;
+    width:100% !important; 
+  }
+  .open-info #messages-list,.direct-chat-messages{
+    width: 100% !important;
+  }
+  .current-chat{
+    width: 100% !important;
+  }
+  .chat-list{
+    width: 100% !important;
+  }nt
+  .container-fluid{
+  width: 100%;
+ }
+ .post_container{
+  width:100%;     
+  }
+  .tabs .nav-justified{
+      width: 150%;
+  }
+  .nav-justified>li {
+  display: table-cell;
+  width: 1%;
+      float: none;
+   }
+  .task_bar{
+      display: inline;
+  }
+  .tasks{
+      display: none;
+      width: 100%;
+      position: fixed;
+      top: 43px;
+  }        
+  header .search_input.pull-left{
+      display: none;
+  }
+
+  .wid-xs-padd-top{
+   padding-top:10px;
+  }
+  
+  .wid-xs-no-padd-top{
+      padding-top: 0px;
+  }
+  .main_profile{
+      padding:0px;
+      padding-top:12px;
+  }
+}
+
+@media(max-width:640px){
+ 
+  .post_container{
+     padding:0px;
+  }
+  .nav_bar{
+      width: 100%;
+  }
+  .tabs .nav-justified {
+      width: 200%;
+  }
+  .main_nav{
+      margin: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1000;
+  /* border-top: 1px solid #ccc; */
+  box-shadow: 0px 0px 10px #ccc;
+  }
+  .recent-chat-list.dropdown-menu{
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top:40px;
+  left: 0px;
+  float: none;
+  height:calc(100% - 80px);
+  }
+  .chat_box{
+      display: none;
+  }
+}
+@media(max-width:480px){
+  .tabs .nav-justified{
+  width: 235%;
+ }
+  .tabs .nav>li>a{
+      padding: 10px 5px;
+  }
+  
+  
+}
+
+@media(max-width:360px){
+  .direct-chat-msg{
+    padding-right:15%; 
+ }
+ .direct-chat-msg.msg_right{
+    padding-left:15%;
+    padding-right: 0px;
+ }
+}
+

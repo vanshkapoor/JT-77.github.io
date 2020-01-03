@@ -1,0 +1,211 @@
+{
+    "storage": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "cloud": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "data center": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "hitachi": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "san": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "nas": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "emc": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "etc": {
+        "skillName": "Storage",
+        "explanation": "The overall set of hardware and software components needed to facilitate storage for a system.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": ["Cloud", "Data center", "Hitachi", "SAN", "NAS", "EMC", "Etc"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "virtualization": {
+        "skillName": "Virtualization",
+        "explanation": "is the creation of a virtual version of something like operating system",
+        "primaryFamily": " a server",
+        "secondaryFamily": [" a storage device or network resources"],
+        "synonyms": ["Infrastructure"],
+        "versions": [],
+        "similarTech": ["Vmware", " Vsphere", " Kernel (KVM)", " Xen", " XenDesktop", " Etc"],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "infrastructure": {
+        "skillName": "Virtualization",
+        "explanation": "is the creation of a virtual version of something like operating system",
+        "primaryFamily": " a server",
+        "secondaryFamily": [" a storage device or network resources"],
+        "synonyms": ["Infrastructure"],
+        "versions": [],
+        "similarTech": ["Vmware", " Vsphere", " Kernel (KVM)", " Xen", " XenDesktop", " Etc"],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "networking": {
+        "skillName": "Networking",
+        "explanation": "a group of two or more computer systems linked together",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": [],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "security": {
+        "skillName": "Security",
+        "explanation": "is the defense of digital information and IT assets against internal and external , malicious and accidental threats.",
+        "primaryFamily": "Infrastructure",
+        "secondaryFamily": [],
+        "synonyms": [],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "redhat": {
+        "skillName": "Redhat",
+        "explanation": "open - source software products provider to an enterprise",
+        "primaryFamily": "OS",
+        "secondaryFamily": [],
+        "synonyms": ["RHEL", "“Red Hat Enterprise Linux”"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "rhel": {
+        "skillName": "Redhat",
+        "explanation": "open - source software products provider to an enterprise",
+        "primaryFamily": "OS",
+        "secondaryFamily": [],
+        "synonyms": ["RHEL", "“Red Hat Enterprise Linux”"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "“red hat enterprise linux”": {
+        "skillName": "Redhat",
+        "explanation": "open - source software products provider to an enterprise",
+        "primaryFamily": "OS",
+        "secondaryFamily": [],
+        "synonyms": ["RHEL", "“Red Hat Enterprise Linux”"],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "centos": {
+        "skillName": "CENTOS",
+        "explanation": "",
+        "primaryFamily": "OS",
+        "secondaryFamily": [],
+        "synonyms": [],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "ubuntu": {
+        "skillName": "Ubuntu",
+        "explanation": "an open source operating system",
+        "primaryFamily": "",
+        "secondaryFamily": [],
+        "synonyms": [],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "linux": {
+        "skillName": "Linux",
+        "explanation": "an operating system , based on UNIX",
+        "primaryFamily": "OS",
+        "secondaryFamily": [],
+        "synonyms": [],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    },
+    "unix": {
+        "skillName": "Unix",
+        "explanation": "Multitasking -Multiuser computer operating systems",
+        "primaryFamily": "OS",
+        "secondaryFamily": [],
+        "synonyms": [],
+        "versions": [],
+        "similarTech": [],
+        "type": "",
+        "booleanSynonyms": []
+    }
+}
