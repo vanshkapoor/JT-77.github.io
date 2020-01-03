@@ -52,7 +52,7 @@ class MessageShell extends Component{
         , "required": false,
         timestamp:Date.now()
         , "label": "Hey Recruiter, I'm your Fellow Tech Bot. I've been trained to help you understand tech in a Recruiter's context."
-     },
+     }
      /*obj2={
         "id": "775F61A9-4C55-45E5-BE0E-290B7861F364"
         , "element": "Single Choice"
@@ -73,7 +73,8 @@ class MessageShell extends Component{
         // ,"Facebook"
     ],
             
-    }*/; 
+    }*/
+
         let messages=JSON.parse(JSON.stringify(this.state.messages));
         let answers=JSON.parse(JSON.stringify(this.state.answers));
         let currentQuestionIndex=this.state.currentQuestionIndex;
