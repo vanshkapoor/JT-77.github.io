@@ -175,7 +175,7 @@ class MessageShell extends Component{
      }
     }
 */
-
+;
     generateAnswerMessage(answer,isForBot){
         let answerMessageObj={};
         if(isForBot)
