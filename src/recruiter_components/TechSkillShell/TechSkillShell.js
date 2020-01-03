@@ -73,7 +73,7 @@ class MessageShell extends Component{
         // ,"Facebook"
     ],
             
-    }; 
+    }*/; 
         let messages=JSON.parse(JSON.stringify(this.state.messages));
         let answers=JSON.parse(JSON.stringify(this.state.answers));
         let currentQuestionIndex=this.state.currentQuestionIndex;
@@ -94,7 +94,7 @@ class MessageShell extends Component{
         else {
             this.linkedinLogin(this.generateAnswerMessage("LinkedIn",true));
         }
-   }*/
+   }
 
 
     facebookLogin(obj){
@@ -137,10 +137,10 @@ class MessageShell extends Component{
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
-        obj.label=errorMessage;
+        /*obj.label=errorMessage;
         this.setState({
             userObj:error
-        });
+        });*/
         this.setNextQuestion(obj);
             setTimeout(() => {
                 this.setState({
@@ -246,7 +246,7 @@ class MessageShell extends Component{
                if(this.state.messages.length==2){
                 onError();
                } 
-            },25000)
+            },10)
 
             function onError(error) {
                 
