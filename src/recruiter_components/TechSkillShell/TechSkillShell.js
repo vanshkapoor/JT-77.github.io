@@ -73,7 +73,7 @@ class MessageShell extends Component{
         // ,"Facebook"
     ],
             
-    }
+    };
 
         let messages=JSON.parse(JSON.stringify(this.state.messages));
         let answers=JSON.parse(JSON.stringify(this.state.answers));
