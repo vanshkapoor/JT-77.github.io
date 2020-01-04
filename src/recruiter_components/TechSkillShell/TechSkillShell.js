@@ -52,9 +52,8 @@ class MessageShell extends Component{
         , "required": false,
         timestamp:Date.now()
         , "label": "Hey Recruiter, I'm your Fellow Tech Bot. I've been trained to help you understand tech in a Recruiter's context."
-     }
-
-     /*obj2={
+     },
+     obj2={
         "id": "775F61A9-4C55-45E5-BE0E-290B7861F364"
         , "element": "Single Choice"
         , "type": "option"
@@ -74,7 +73,8 @@ class MessageShell extends Component{
         // ,"Facebook"
     ],
             
-    }; 
+    };
+
         let messages=JSON.parse(JSON.stringify(this.state.messages));
         let answers=JSON.parse(JSON.stringify(this.state.answers));
         let currentQuestionIndex=this.state.currentQuestionIndex;
@@ -95,10 +95,10 @@ class MessageShell extends Component{
         else {
             this.linkedinLogin(this.generateAnswerMessage("LinkedIn",true));
         }
-   }*/
+   }
 
 
-    /*facebookLogin(obj){
+    facebookLogin(obj){
      var provider = new this.props.firebase.auth.FacebookAuthProvider();
      provider.addScope('user_birthday');
      provider.addScope('user_gender');
@@ -138,10 +138,10 @@ class MessageShell extends Component{
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
-        obj.label=errorMessage;
+        /*obj.label=errorMessage;
         this.setState({
             userObj:error
-        });
+        });*/
         this.setNextQuestion(obj);
             setTimeout(() => {
                 this.setState({
@@ -174,8 +174,8 @@ class MessageShell extends Component{
         },1500);
      }
     }
-*/
-};
+
+
     generateAnswerMessage(answer,isForBot){
         let answerMessageObj={};
         if(isForBot)
@@ -195,7 +195,7 @@ class MessageShell extends Component{
         return answerMessageObj;    
     }
 
-  /*  linkedinLogin(obj){
+    linkedinLogin(obj){
         let that=this;
             if(!window.IN.User)
             {
@@ -247,14 +247,12 @@ class MessageShell extends Component{
                if(this.state.messages.length==2){
                 onError();
                } 
-            },2500)
-*/
-            };
+            },10)
 
             function onError(error) {
                 
-                //console.log(error);
-                //obj.label=`OOps, Something went wrong. <br/> Lets continue...`;
+                console.log(error);
+                obj.label=`OOps, Something went wrong. <br/> Lets continue...`;
                 // console.log(that);   
                 that.setNextQuestion(obj);
                 setTimeout(() => {
@@ -280,6 +278,7 @@ class MessageShell extends Component{
                 this.setNextQuestion(obj);
             }
 
+    }
 
     submitSingleChoiceAnswer(question,answer){
             let obj={
