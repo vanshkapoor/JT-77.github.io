@@ -92,18 +92,26 @@ export const a = {
             , "label": "Choose a skill from the below drop down for which you need a Boolean help"
             , "options": ["Java Developer","UI Developer","Android Developer","Python Developer",".Net Developer"],
             conditions:[{
-             val:"Yes I agree", 
+             val:"Java Developer", 
              next:"UCaGOaxNrsdGsdalwnaJ"
             },
             {
-             val:"I disagree",
+             val:"UI Developer",
             next:"qfHwmIt43ajVOJ1OsDtp"
             },
-            {val:"Maybe",
+            {
+             val:"Android Developer",
+            next:"qfHwmIt43ajVOJ1OsDtp"
+            },
+            {
+             val:"Python Developer",
+            next:"qfHwmIt43ajVOJ1OsDtp"
+            },
+            {val:".Net Developer",
             next:"UCaGOaxNrsdGsdalwnaJ"}
             ]    
         }, 
-            //response for yes/maybe
+            //response for java/maybe
             {
             "id": "UCaGOaxNrsdGsdalwnaJ"
             , "element": "Statement"
