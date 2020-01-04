@@ -8,30 +8,31 @@ export const a = {
             , "type": "statement"
             , "name": "Statement"
             , "required": false
-            , "label": "Hey There, I'm your Fellow Monk. I have been trained by Ashfaq (https://www.linkedin.com/in/ashfaqahmedhr/), who happens to be a Recruitment Trainer.<br/>"
+            , "label": "Hey There, I'm your Fellow Monk. I have been trained by Ashfaq (www.linkedin.com/in/ashfaqahmedhr/), who happens to be a Recruitment Trainer.<br/>"
         },{
             "id": "v5PJbssdTbjAY5ODgyVD"
             , "element": "Single Choice"
             , "type": "option"
             , "name": "Single Choice"
             , "required": false
-            , "label": "May I know who you are?"
-            , "options": ["Recruiter","Candidate"
+            , "label": "Basically I have been trained to help recruiters in any of the below areas."
+            , "options": ["Boolean","Technology"
             // ,"Startup"
             ],
             conditions:[{
-             val:"Recruiter",
+             val:"Boolean",
              next:""
             },
             {
-             val:"Candidate",
+             val:"Technology",
              next:"VkFWBF4C3rwFCJ2C5545"
             },
             {val:"Startup",
             next:""}
             ],
             actions:[{
-                val:"Recruiter",
+                val:"Boolean",
+                label: "Hey There, I'm your Fellow Monk. I have been trained by Ashfaq (www.linkedin.com/in/ashfaqahmedhr/), who happens to be a Recruitment Trainer.<br/>",
                 action:"GreetUser",
                 params:"Recruiter"
             },{
