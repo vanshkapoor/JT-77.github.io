@@ -647,7 +647,7 @@ export const a = {
         {
             "id": "VkFWBF4C3rwFCJ2C5545"
             , "required": false
-            , "label"="Basically I'm trained with close to 1000 tech Jargons around UI, backend, devops, BigData (i.e) primarily around the digital tech stack. Just type the word which you're looking forward to"
+            , "label"="Basically I'm trained with close to 1000 tech Jargons around UI, backend, devops, BigData (i.e) primarily around the digital tech stack.Just type the word which you're looking forward to"
             ,
 
 
