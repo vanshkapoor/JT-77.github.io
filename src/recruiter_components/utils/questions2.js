@@ -32,12 +32,9 @@ export const a = {
             ],
             actions:[{
                 val:"Boolean",
-                label: "Hey There, I'm your Fellow Monk. I have been trained by Ashfaq (www.linkedin.com/in/ashfaqahmedhr/), who happens to be a Recruitment Trainer.<br/>",
-                action:"GreetUser",
                 params:"Recruiter"
             },{
-                val:"Candidate",
-                action:"GreetUser",
+                val:"Technology",
                 params:"Candidate"
             },{
                 val:"Startup",
@@ -74,25 +71,25 @@ export const a = {
             , "type": "option"
             , "name": "Single Choice"
             , "required": false
-            , "label": "BTW, you know my Inventor is also a recruiter & he designed me to help recruiters."
+            , "label": "Cool, I will try my best to help you frame some amazing search queries. But I have been trained only a bunch of skills for now and every week there would be new skills on which I will be trained."
             , "options": ["So how can you help me?"]
         }, 
-        {
+        /*{
             "id": "VkFWBF4Ck534CJ2C4GhI"
             , "element": "Statement"
             , "type": "statement"
             , "name": "Statement"
             , "required": false
             , "label": "Here you go, this is what I can do for you:-<ul><br/><li> I can screen candidates on your behalf with basic questions.</li><li> After my interaction, you can directly chat with candidates one on one</li><li>Remind you about your upcoming tasks\n Schedule Interviews</li><li>Follow up with candidates etc.</li>"
-        }, 
+        },*/ 
         {
             "id": "jikZukjOX3afwJTVOz4j"
             , "element": "Single Choice"
             , "type": "option"
             , "name": "Single Choice"
             , "required": false
-            , "label": "By the way, what's your thoughts on AI/Bot taking over recruitment, do you agree?"
-            , "options": ["Yes I agree","I disagree","Maybe"],
+            , "label": "Choose a skill from the below drop down for which you need a Boolean help"
+            , "options": ["Java Developer","UI Developer","Android Developer","Python Developer",".Net Developer"],
             conditions:[{
              val:"Yes I agree", 
              next:"UCaGOaxNrsdGsdalwnaJ"
