@@ -21,7 +21,7 @@ export const a = {
             ],
             conditions:[{
              val:"Boolean",
-             next:""
+             next:"sU5OhibkWwbvkzgkhwcE"
             },
             {
              val:"Technology",
