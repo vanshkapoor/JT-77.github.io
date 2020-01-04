@@ -29,9 +29,10 @@ export const a = {
             },
             {val:"Startup",
             next:""}
-            ],
+            ]/*,
             actions:[{
                 val:"Boolean",
+
                 params:"Recruiter"
             },{
                 val:"Technology",
@@ -40,7 +41,7 @@ export const a = {
                 val:"Startup",
                 action:"GreetUser",
                 params:"Startup Enthusiast"
-            }]
+            }]*/
         }, 
             //response for recruiter
        /* {
