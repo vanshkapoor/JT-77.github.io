@@ -648,28 +648,9 @@ export const a = {
             "id": "VkFWBF4C3rwFCJ2C5545"
             , "required": false
             , "label"="Basically I'm trained with close to 1000 tech Jargons around UI, backend, devops, BigData (i.e) primarily around the digital tech stack.<br/>Just type the word which you're looking forward to"
-            , this.setState({userInputActive:true}),
-                this.setNextQuestion(obj);
-        
-                setNextQuestion(answerMessageObj,again){
-        let messages=JSON.parse(JSON.stringify(this.state.messages));
-        // let answers=JSON.parse(JSON.stringify(this.state.answers));
-        let currentQuestionIndex=this.state.currentQuestionIndex;
+            ;
 
-        // console.log(answerMessageObj);
-            
-        if(answerMessageObj)
-            messages.push(answerMessageObj);     
-            
-            if(again)
-             this.followUpMessage(); 
 
-            this.setState({
-                messages,
-                currentQuestionIndex:currentQuestionIndex+1
-            }); 
-    
-                
         },
 
           {
