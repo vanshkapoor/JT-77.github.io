@@ -1,3 +1,19 @@
+import React, {Component} from 'react';
+import TextMessage from '../TextMessage/TextMessage';
+import UserInfo from '../UserInfo/UserInfo';
+import MessageList from './../MessageList/MessageList';
+import TechInput from './TechInput';
+import FeaturesCandidate from './../modals/FeaturesCandidate';
+import FeaturesRecruiter from './../modals/FeaturesRecruiter';
+import AboutTeam from './../modals/Team';
+import Pricing from './../modals/Price';
+import ContactUs from './../modals/ContactUs';
+import Price from './../modals/Price';
+import BookNow from './../modals/BookNow';
+import swal from 'sweetalert';
+import dictionary from './../utils/UI';
+const $=window.$;
+
 export const a = {
      "__v": 0
     , "published":true
@@ -630,21 +646,32 @@ export const a = {
         },*/
         {
             "id": "VkFWBF4C3rwFCJ2C5545"
-            , "element": "Single Choice"
-            , "type": "option"
-            , "name": "Single Choice"
             , "required": false
-            , "label": "BTW, if you are given a choice of interacting with an intelligent BOT vs a Recruiter for your job hunt, whom would you prefer?"
-            , "options": ["Bot","Recruiter"],
-            conditions:[{
-                val:"Bot", 
-                next:"VkFWBF4C3rwFCJ232Gde"
-                },
-                {
-                val:"Recruiter",
-                next:"VkFWBF4we334CJ2C44tI"
-            }]    
-          },
+            , "label"="Basically I'm trained with close to 1000 tech Jargons around UI, backend, devops, BigData (i.e) primarily around the digital tech stack.<br/>Just type the word which you're looking forward to"
+            , this.setState({userInputActive:true}),
+                this.setNextQuestion(obj);
+        
+                setNextQuestion(answerMessageObj,again){
+        let messages=JSON.parse(JSON.stringify(this.state.messages));
+        // let answers=JSON.parse(JSON.stringify(this.state.answers));
+        let currentQuestionIndex=this.state.currentQuestionIndex;
+
+        // console.log(answerMessageObj);
+            
+        if(answerMessageObj)
+            messages.push(answerMessageObj);     
+            
+            if(again)
+             this.followUpMessage(); 
+
+            this.setState({
+                messages,
+                currentQuestionIndex:currentQuestionIndex+1
+            }); 
+    
+                
+        },
+
           {
             "id": "VkFWBF4C3rwFCJ232Gde"
             , "element": "Statement"
