@@ -8,7 +8,7 @@ export const a = {
             , "type": "statement"
             , "name": "Statement"
             , "required": false
-            , "label": "Hey There, I'm your Fellow Bot.\n Just wondering how I can help you<br/>"
+            , "label": "Hey There, I'm your Fellow Monk. I have been trained by Ashfaq (https://www.linkedin.com/in/ashfaqahmedhr/), who happens to be a Recruitment Trainer.<br/>"
         },{
             "id": "v5PJbssdTbjAY5ODgyVD"
             , "element": "Single Choice"

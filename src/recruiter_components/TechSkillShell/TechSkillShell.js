@@ -249,6 +249,8 @@ class MessageShell extends Component{
                } 
             },2500)
 */
+            };
+
             function onError(error) {
                 
                 //console.log(error);
@@ -278,7 +280,6 @@ class MessageShell extends Component{
                 this.setNextQuestion(obj);
             }
 
-    }
 
     submitSingleChoiceAnswer(question,answer){
             let obj={
