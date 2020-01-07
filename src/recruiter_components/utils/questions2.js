@@ -745,8 +745,8 @@ export const a = {
         },
         {
             "id": "qfDFF3t43ajV351OsDtp"
-            , "element": "Statement"
-            , "type": "statement"
+            , "element": "Question"
+            , "type": "text"
             , "name": "Statement"
             , "required": false
             , "label": "And to make you super happy,I’m gonna put you on to a live Recruiter/Hiring Manager for a Chat. You guys can chat up anytime whenever you both are online."

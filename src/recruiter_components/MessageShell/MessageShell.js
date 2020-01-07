@@ -79,6 +79,7 @@ class MessageShell extends Component{
        let messages=JSON.parse(JSON.stringify(this.state.messages));
        let answers=JSON.parse(JSON.stringify(this.state.answers));
        let user=this.state.user;
+       console.log(this.state);
         // console.log(this.state.currentQuestion);
        if(answerMessageObj)
        { messages.push(answerMessageObj);
@@ -93,7 +94,7 @@ class MessageShell extends Component{
 
        let currentQuestionIndex=this.state.currentQuestionIndex;
        currentQuestionIndex=this.getNextJumpQuestionIndex(currentQuestionIndex,answerMessageObj);
-       console.log(this.state.questions)
+    //    console.log(this.state.questions)
        if(!this.state.questions[currentQuestionIndex+1])
         return;
 
