@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import TextMessage from '../TextMessage/TextMessage';
 import UserInfo from '../UserInfo/UserInfo';
 import MessageList from './../MessageList/MessageList';
-import TechInput from './TechInput';
+// import TechInput from './TechInput';
 import FeaturesCandidate from './../modals/FeaturesCandidate';
 import FeaturesRecruiter from './../modals/FeaturesRecruiter';
 import AboutTeam from './../modals/Team';

@@ -197,13 +197,28 @@ class MessageShell extends Component{
 
     linkedinLogin(obj){
         let that=this;
-            if(!window.IN.User)
-            {
-                onError();
-                return;
-            }
+        obj.label=`OOps, Something went wrong. <br/> Lets continue...`;
+        // console.log(that);   
+        that.setNextQuestion(obj);
+        setTimeout(() => {
+            
+            that.setState({
+                userInputActive:true});
+            that.setNextQuestion({
+                "element": "Statement"
+                , "type": "statement"
+                , "name": "Statement",
+                timestamp:Date.now(),
+                label:"Basically I'm trained with close to 1000 tech Jargons around UI, backend, devops, BigData (i.e) primarily around the digital tech stack.<br/>Just type the word which you're looking forward to"
+            }); 
+        },2000);
+            // if(!window.IN.User)
+            // {
+            //     onError();
+            //     return;
+            // }
 
-            window.IN.Event.on(window.IN, "auth", getProfileData);
+            // window.IN.Event.on(window.IN, "auth", getProfileData);
             
             function getProfileData() {
             window.IN.API.Profile("me").fields("id", "first-name", "last-name","maiden-name","formatted-name","industry","current-share","num-connections","num-connections-capped", "headline", "location","summary","specialties","positions", "picture-url", "public-profile-url", "email-address").result(displayProfileData).error(onError);
@@ -270,8 +285,8 @@ class MessageShell extends Component{
                 //  window.location.reload();
             }
             if(Object.keys(this.state.userObj).length==0){  
-            window.IN.User.authorize((...args)=>{
-            })
+            // window.IN.User.authorize((...args)=>{
+            // })
             } else {
                 obj.label="Basically I'm trained with close to 1000 tech Jargons around UI, backend, devops, BigData (i.e) primarily around the digital tech stack.<br/>Just type the word which you're looking forward to";    
                 this.setState({userInputActive:true});

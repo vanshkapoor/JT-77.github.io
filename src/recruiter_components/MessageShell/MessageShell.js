@@ -79,7 +79,7 @@ class MessageShell extends Component{
        let messages=JSON.parse(JSON.stringify(this.state.messages));
        let answers=JSON.parse(JSON.stringify(this.state.answers));
        let user=this.state.user;
-      
+        // console.log(this.state.currentQuestion);
        if(answerMessageObj)
        { messages.push(answerMessageObj);
          if(this.state.currentQuestion.actions){
@@ -93,11 +93,12 @@ class MessageShell extends Component{
 
        let currentQuestionIndex=this.state.currentQuestionIndex;
        currentQuestionIndex=this.getNextJumpQuestionIndex(currentQuestionIndex,answerMessageObj);
-
+       console.log(this.state.questions)
        if(!this.state.questions[currentQuestionIndex+1])
         return;
 
        let nextQuestion=this.state.questions[currentQuestionIndex+1];
+    //    console.log("next question = " + nextQuestion);
        nextQuestion.timestamp=Date.now(); 
        messages.push(nextQuestion);
 
@@ -112,6 +113,8 @@ class MessageShell extends Component{
             console.log(xhr);
         });
 
+        // console.log(this.state.messages);
+        // console.log(this.state.answers)
      this.setState({
         messages,
         answers,

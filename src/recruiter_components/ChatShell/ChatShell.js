@@ -96,7 +96,7 @@ class CHatShell extends Component{
       <Route exact strict path={"/"} render={(props)=>{
         return <div> 
         <div className={this.state.isDeviceMobile?"none":""}>
-        <ChatList {...this.state} 
+        <ChatList {...this.state}                                                 // the list of chats shown on left 
           currentChat={chatChat}
           updateCurrentChat={(obj)=>this.setState({currentChat:obj})} 
           />
